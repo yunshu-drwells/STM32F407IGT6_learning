@@ -1,0 +1,12 @@
+taskcreation\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+taskcreation\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+taskcreation\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+taskcreation\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+taskcreation\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+taskcreation\list.o: ../Inc/FreeRTOSConfig.h
+taskcreation\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+taskcreation\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+taskcreation\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+taskcreation\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+taskcreation\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+taskcreation\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

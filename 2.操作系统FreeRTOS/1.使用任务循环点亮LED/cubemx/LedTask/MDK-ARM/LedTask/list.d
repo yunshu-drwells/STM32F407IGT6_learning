@@ -1,0 +1,12 @@
+ledtask\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+ledtask\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+ledtask\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+ledtask\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+ledtask\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+ledtask\list.o: ../Core/Inc/FreeRTOSConfig.h
+ledtask\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+ledtask\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+ledtask\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+ledtask\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+ledtask\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+ledtask\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

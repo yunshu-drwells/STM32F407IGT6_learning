@@ -1,0 +1,25 @@
+--cpu=Cortex-M4.fp
+"atk_f407\startup_stm32f407xx.o"
+"atk_f407\stm32f4xx_hal_pwr.o"
+"atk_f407\stm32f4xx_hal_rcc.o"
+"atk_f407\stm32f4xx_hal_rcc_ex.o"
+"atk_f407\stm32f4xx_hal_dma.o"
+"atk_f407\stm32f4xx_hal_pwr_ex.o"
+"atk_f407\stm32f4xx_hal_flash_ramfunc.o"
+"atk_f407\stm32f4xx_hal_gpio.o"
+"atk_f407\stm32f4xx_hal_flash.o"
+"atk_f407\stm32f4xx_hal_cortex.o"
+"atk_f407\stm32f4xx_hal_tim_ex.o"
+"atk_f407\stm32f4xx_hal_flash_ex.o"
+"atk_f407\stm32f4xx_hal_dma_ex.o"
+"atk_f407\stm32f4xx_hal.o"
+"atk_f407\stm32f4xx_hal_tim.o"
+"atk_f407\system_stm32f4xx.o"
+"atk_f407\stm32f4xx_hal_msp.o"
+"atk_f407\stm32f4xx_it.o"
+"atk_f407\main.o"
+"atk_f407\gpio.o"
+--library_type=microlib --strict --scatter "atk_f407\atk_f407.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "atk_f407.map" -o atk_f407\atk_f407.axf

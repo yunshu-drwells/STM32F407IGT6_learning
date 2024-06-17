@@ -1,0 +1,15 @@
+recursivemutextest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+recursivemutextest\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+recursivemutextest\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+recursivemutextest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+recursivemutextest\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+recursivemutextest\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+recursivemutextest\queue.o: ../Core/Inc/FreeRTOSConfig.h
+recursivemutextest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+recursivemutextest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+recursivemutextest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+recursivemutextest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+recursivemutextest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+recursivemutextest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+recursivemutextest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+recursivemutextest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h

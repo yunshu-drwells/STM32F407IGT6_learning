@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp
+"sleep\startup_stm32f407xx.o"
+"sleep\stm32f4xx_hal_flash.o"
+"sleep\stm32f4xx_hal_rcc.o"
+"sleep\stm32f4xx_hal.o"
+"sleep\stm32f4xx_hal_uart.o"
+"sleep\stm32f4xx_hal_dma_ex.o"
+"sleep\stm32f4xx_hal_pwr_ex.o"
+"sleep\stm32f4xx_hal_flash_ex.o"
+"sleep\stm32f4xx_hal_pwr.o"
+"sleep\stm32f4xx_hal_cortex.o"
+"sleep\stm32f4xx_hal_tim.o"
+"sleep\stm32f4xx_hal_dma.o"
+"sleep\stm32f4xx_hal_tim_ex.o"
+"sleep\stm32f4xx_hal_flash_ramfunc.o"
+"sleep\stm32f4xx_hal_rcc_ex.o"
+"sleep\stm32f4xx_hal_gpio.o"
+"sleep\system_stm32f4xx.o"
+"sleep\main.o"
+"sleep\stm32f4xx_hal_msp.o"
+"sleep\gpio.o"
+"sleep\stm32f4xx_it.o"
+"sleep\usart.o"
+--library_type=microlib --strict --scatter "Sleep\Sleep.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Sleep.map" -o Sleep\Sleep.axf

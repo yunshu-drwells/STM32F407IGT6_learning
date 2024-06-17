@@ -1,0 +1,1 @@
+用于存放 ST 提供的 F4xx HAL 库驱动代码。STM32CubeF4 固件包里面拷贝，只保留 Inc 和Src 文件夹即可。

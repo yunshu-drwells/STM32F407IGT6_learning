@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+"232\startup_stm32f407xx.o"
+"232\stm32f4xx_hal_rcc_ex.o"
+"232\stm32f4xx_hal_pwr_ex.o"
+"232\stm32f4xx_hal_pwr.o"
+"232\stm32f4xx_hal_tim_ex.o"
+"232\stm32f4xx_hal_flash.o"
+"232\stm32f4xx_hal_cortex.o"
+"232\stm32f4xx_hal_dma_ex.o"
+"232\stm32f4xx_hal_tim.o"
+"232\stm32f4xx_hal_flash_ramfunc.o"
+"232\stm32f4xx_hal_gpio.o"
+"232\stm32f4xx_hal_uart.o"
+"232\stm32f4xx_hal.o"
+"232\stm32f4xx_hal_dma.o"
+"232\stm32f4xx_hal_flash_ex.o"
+"232\stm32f4xx_hal_rcc.o"
+"232\system_stm32f4xx.o"
+"232\stm32f4xx_hal_msp.o"
+"232\main.o"
+"232\stm32f4xx_it.o"
+"232\rs232.o"
+--library_type=microlib --strict --scatter "232\232.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "232.map" -o 232\232.axf

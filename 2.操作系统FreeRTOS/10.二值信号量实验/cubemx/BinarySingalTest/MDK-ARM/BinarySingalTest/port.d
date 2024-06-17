@@ -1,0 +1,12 @@
+binarysingaltest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+binarysingaltest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+binarysingaltest\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+binarysingaltest\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+binarysingaltest\port.o: ../Core/Inc/FreeRTOSConfig.h
+binarysingaltest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+binarysingaltest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+binarysingaltest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+binarysingaltest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+binarysingaltest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+binarysingaltest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+binarysingaltest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

@@ -1,0 +1,15 @@
+countsemaphoretest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+countsemaphoretest\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+countsemaphoretest\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+countsemaphoretest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+countsemaphoretest\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+countsemaphoretest\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+countsemaphoretest\queue.o: ../Core/Inc/FreeRTOSConfig.h
+countsemaphoretest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+countsemaphoretest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+countsemaphoretest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+countsemaphoretest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+countsemaphoretest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+countsemaphoretest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+countsemaphoretest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+countsemaphoretest\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h

@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp
+"stop\startup_stm32f407xx.o"
+"stop\system_stm32f4xx.o"
+"stop\usart.o"
+"stop\stm32f4xx_it.o"
+"stop\gpio.o"
+"stop\main.o"
+"stop\stm32f4xx_hal_msp.o"
+"stop\stm32f4xx_hal_flash_ramfunc.o"
+"stop\stm32f4xx_hal_pwr_ex.o"
+"stop\stm32f4xx_hal.o"
+"stop\stm32f4xx_hal_uart.o"
+"stop\stm32f4xx_hal_rcc_ex.o"
+"stop\stm32f4xx_hal_tim.o"
+"stop\stm32f4xx_hal_tim_ex.o"
+"stop\stm32f4xx_hal_gpio.o"
+"stop\stm32f4xx_hal_dma_ex.o"
+"stop\stm32f4xx_hal_flash.o"
+"stop\stm32f4xx_hal_dma.o"
+"stop\stm32f4xx_hal_flash_ex.o"
+"stop\stm32f4xx_hal_pwr.o"
+"stop\stm32f4xx_hal_cortex.o"
+"stop\stm32f4xx_hal_rcc.o"
+--library_type=microlib --strict --scatter "Stop\Stop.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Stop.map" -o Stop\Stop.axf
