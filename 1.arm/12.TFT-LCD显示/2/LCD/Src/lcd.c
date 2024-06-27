@@ -30,7 +30,7 @@
 #include "lcd.h"
 #include "lcdfont.h"
 #include "fsmc.h"
-
+#include "usart.h"
 
 
 /* lcd_ex.c存放各个LCD驱动IC的寄存器初始化部分代码,以简化lcd.c,该.c文件
