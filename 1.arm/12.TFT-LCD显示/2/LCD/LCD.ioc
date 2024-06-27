@@ -1,6 +1,13 @@
 #MicroXplorer Configuration settings - do not modify
+FSMC.AddressSetupTime1=0xf
+FSMC.BusTurnAroundDuration1=15
+FSMC.DataSetupTime1=60
+FSMC.ExtendedAddressSetupTime1=9
+FSMC.ExtendedBusTurnAroundDuration1=15
+FSMC.ExtendedDataSetupTime1=9
 FSMC.ExtendedMode1=FSMC_EXTENDED_MODE_ENABLE
-FSMC.IPParameters=ExtendedMode1
+FSMC.IPParameters=ExtendedMode1,AddressSetupTime1,DataSetupTime1,BusTurnAroundDuration1,ExtendedAddressSetupTime1,ExtendedDataSetupTime1,ExtendedBusTurnAroundDuration1
+FSMC.IPParametersWithoutCheck=ExtendedDataSetupTime1,DataSetupTime1
 File.Version=6
 KeepUserPlacement=false
 Mcu.Family=STM32F4

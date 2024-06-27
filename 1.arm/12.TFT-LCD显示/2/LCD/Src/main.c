@@ -99,9 +99,11 @@ int main(void)
   MX_FSMC_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+	printf("start lcd_init\n");
 	lcd_init();                             /* 初始化LCD */
   g_point_color = RED;
   sprintf((char *)lcd_id, "LCD ID:%04X", lcddev.id);  /* 将LCD ID打印到lcd_id数组 */
+	printf("lcd_init down\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */
