@@ -28,7 +28,7 @@
 "usbdevice\delay.o"
 "usbdevice\malloc.o"
 "usbdevice\norflash.o"
-"usbdevice\spi.o"
+"usbdevice\spi_1.o"
 "usbdevice\system_stm32f4xx.o"
 "usbdevice\usbd_core.o"
 "usbdevice\usbd_ctlreq.o"

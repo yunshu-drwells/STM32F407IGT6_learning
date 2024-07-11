@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx,USE_USB_OTG_FS</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;   ../Drivers/STM32F4xx_HAL_Driver/Inc;   ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;   ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;   ../Drivers/CMSIS/Include;   ..\Middlewares\USB\STM32_USB_Device_Library\Core\Inc;   ..\Middlewares\USB\STM32_USB_Device_Library\Class\MSC\Inc;   ..\Middlewares\USB\USB_APP</IncludePath>
+              <IncludePath>../Inc;     ../Drivers/STM32F4xx_HAL_Driver/Inc;     ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;     ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;     ../Drivers/CMSIS/Include;     ..\Middlewares\USB\STM32_USB_Device_Library\Core\Inc;     ..\Middlewares\USB\STM32_USB_Device_Library\Class\MSC\Inc;     ..\Middlewares\USB\USB_APP</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -537,7 +537,7 @@
             <File>
               <FileName>spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Src\spi.c</FilePath>
+              <FilePath>../Src/spi.c</FilePath>
             </File>
           </Files>
         </Group>

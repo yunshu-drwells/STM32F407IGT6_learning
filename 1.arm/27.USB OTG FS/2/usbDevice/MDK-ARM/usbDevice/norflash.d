@@ -1,5 +1,10 @@
 usbdevice\norflash.o: ..\Src\norflash.c
 usbdevice\norflash.o: ../Inc/spi.h
+usbdevice\norflash.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+usbdevice\norflash.o: ../Inc/stm32f4xx_hal_conf.h
+usbdevice\norflash.o: ../Inc/main.h
+usbdevice\norflash.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+usbdevice\norflash.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 usbdevice\norflash.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 usbdevice\norflash.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 usbdevice\norflash.o: ../Drivers/CMSIS/Include/core_cm4.h
@@ -10,11 +15,6 @@ usbdevice\norflash.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 usbdevice\norflash.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 usbdevice\norflash.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 usbdevice\norflash.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
-usbdevice\norflash.o: ../Inc/stm32f4xx_hal_conf.h
-usbdevice\norflash.o: ../Inc/main.h
-usbdevice\norflash.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
-usbdevice\norflash.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
-usbdevice\norflash.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 usbdevice\norflash.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
 usbdevice\norflash.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 usbdevice\norflash.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
@@ -33,7 +33,6 @@ usbdevice\norflash.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 usbdevice\norflash.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 usbdevice\norflash.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 usbdevice\norflash.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
-usbdevice\norflash.o: ../Drivers/CMSIS/Include/core_cm4.h
 usbdevice\norflash.o: ../Inc/norflash.h
 usbdevice\norflash.o: ../Drivers/CMSIS/Include/core_cm4.h
 usbdevice\norflash.o: ../Inc/usart.h

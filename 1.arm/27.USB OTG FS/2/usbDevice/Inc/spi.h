@@ -1,59 +1,59 @@
 /**
- ****************************************************************************************************
- * @file        spi.h
- * @author      正点原子团队(ALIENTEK)
- * @version     V1.0
- * @date        2021-10-26
- * @brief       SPI 驱动代码
- * @license     Copyright (c) 2020-2032, 广州市星翼电子科技有限公司
- ****************************************************************************************************
- * @attention
- *
- * 实验平台：正点原子 F407电机开发板
- * 在线视频：www.yuanzige.com
- * 技术论坛：http://www.openedv.com/forum.php
- * 公司网址：www.alientek.com
- * 购买地址：zhengdianyuanzi.tmall.com
- *
- * 修改说明
- * V1.0 20211026
- * 第一次发布
- *
- ****************************************************************************************************
- */
+  ******************************************************************************
+  * File Name          : SPI.h
+  * Description        : This file provides code for the configuration
+  *                      of the SPI instances.
+  ******************************************************************************
+  ** This notice applies to any and all portions of this file
+  * that are not between comment pairs USER CODE BEGIN and
+  * USER CODE END. Other portions of this file, whether 
+  * inserted by the user or by software development tools
+  * are owned by their respective copyright owners.
+  *
+  * COPYRIGHT(c) 2024 STMicroelectronics
+  *
+  * Redistribution and use in source and binary forms, with or without modification,
+  * are permitted provided that the following conditions are met:
+  *   1. Redistributions of source code must retain the above copyright notice,
+  *      this list of conditions and the following disclaimer.
+  *   2. Redistributions in binary form must reproduce the above copyright notice,
+  *      this list of conditions and the following disclaimer in the documentation
+  *      and/or other materials provided with the distribution.
+  *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  *      may be used to endorse or promote products derived from this software
+  *      without specific prior written permission.
+  *
+  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  *
+  ******************************************************************************
+  */
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __spi_H
+#define __spi_H
+#ifdef __cplusplus
+ extern "C" {
+#endif
 
-#ifndef __SPI_H
-#define __SPI_H
-
-#include "stm32f4xx.h"
-#include "core_cm4.h"
+/* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
+#include "main.h"
 
+/* USER CODE BEGIN Includes */
 
+/* USER CODE END Includes */
 
+extern SPI_HandleTypeDef hspi2;
 
-/******************************************************************************************/
-/* SPI2 引脚 定义 */
-
-#define SPI2_SCK_GPIO_PORT              GPIOI
-#define SPI2_SCK_GPIO_PIN               GPIO_PIN_1
-#define SPI2_SCK_GPIO_CLK_ENABLE()      do{ __HAL_RCC_GPIOI_CLK_ENABLE(); }while(0)   /* PI口时钟使能 */
-
-#define SPI2_MISO_GPIO_PORT             GPIOI
-#define SPI2_MISO_GPIO_PIN              GPIO_PIN_2
-#define SPI2_MISO_GPIO_CLK_ENABLE()     do{ __HAL_RCC_GPIOI_CLK_ENABLE(); }while(0)   /* PI口时钟使能 */
-
-#define SPI2_MOSI_GPIO_PORT             GPIOI
-#define SPI2_MOSI_GPIO_PIN              GPIO_PIN_3
-#define SPI2_MOSI_GPIO_CLK_ENABLE()     do{ __HAL_RCC_GPIOI_CLK_ENABLE(); }while(0)   /* PI口时钟使能 */
-
-/* SPI2相关定义 */
-#define SPI2_SPI                        SPI2
-#define SPI2_SPI_CLK_ENABLE()           do{ __HAL_RCC_SPI2_CLK_ENABLE(); }while(0)    /* SPI2时钟使能 */
-
-/******************************************************************************************/
-
-
+/* USER CODE BEGIN Private defines */
 /* SPI总线速度设置 */
 #define SPI_SPEED_2         0
 #define SPI_SPEED_4         1
@@ -64,9 +64,29 @@
 #define SPI_SPEED_128       6
 #define SPI_SPEED_256       7
 
-
-void spi2_init(void);
 void spi2_set_speed(uint8_t speed);
-uint8_t spi2_read_write_byte(uint8_t txdata);
+uint8_t spi2_read_write_byte(uint8_t txdata);	 
+/* USER CODE END Private defines */
 
+extern void _Error_Handler(char *, int);
+
+void MX_SPI2_Init(void);
+
+/* USER CODE BEGIN Prototypes */
+
+/* USER CODE END Prototypes */
+
+#ifdef __cplusplus
+}
 #endif
+#endif /*__ spi_H */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

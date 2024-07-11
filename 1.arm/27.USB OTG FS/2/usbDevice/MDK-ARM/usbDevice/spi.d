@@ -1,5 +1,10 @@
 usbdevice\spi.o: ..\Src\spi.c
 usbdevice\spi.o: ../Inc/spi.h
+usbdevice\spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+usbdevice\spi.o: ../Inc/stm32f4xx_hal_conf.h
+usbdevice\spi.o: ../Inc/main.h
+usbdevice\spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+usbdevice\spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 usbdevice\spi.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 usbdevice\spi.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 usbdevice\spi.o: ../Drivers/CMSIS/Include/core_cm4.h
@@ -10,11 +15,6 @@ usbdevice\spi.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 usbdevice\spi.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 usbdevice\spi.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 usbdevice\spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
-usbdevice\spi.o: ../Inc/stm32f4xx_hal_conf.h
-usbdevice\spi.o: ../Inc/main.h
-usbdevice\spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
-usbdevice\spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
-usbdevice\spi.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 usbdevice\spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
 usbdevice\spi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 usbdevice\spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
@@ -33,4 +33,4 @@ usbdevice\spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 usbdevice\spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 usbdevice\spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 usbdevice\spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
-usbdevice\spi.o: ../Drivers/CMSIS/Include/core_cm4.h
+usbdevice\spi.o: ../Inc/gpio.h

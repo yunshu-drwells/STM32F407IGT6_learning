@@ -49,6 +49,14 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define Spi2_cs_Pin GPIO_PIN_0
+#define Spi2_cs_GPIO_Port GPIOI
+#define Spi2_sck_Pin GPIO_PIN_1
+#define Spi2_sck_GPIO_Port GPIOI
+#define Spi2_miso_Pin GPIO_PIN_2
+#define Spi2_miso_GPIO_Port GPIOI
+#define Spi2_mosi_Pin GPIO_PIN_3
+#define Spi2_mosi_GPIO_Port GPIOI
 #define LED0_Pin GPIO_PIN_0
 #define LED0_GPIO_Port GPIOE
 #define LED1_Pin GPIO_PIN_1

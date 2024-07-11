@@ -1,97 +1,131 @@
 /**
- ****************************************************************************************************
- * @file        spi.c
- * @author      正点原子团队(ALIENTEK)
- * @version     V1.0
- * @date        2021-10-26
- * @brief       SPI 驱动代码
- * @license     Copyright (c) 2020-2032, 广州市星翼电子科技有限公司
- ****************************************************************************************************
- * @attention
- *
- * 实验平台：正点原子 F407电机开发板
- * 在线视频：www.yuanzige.com
- * 技术论坛：http://www.openedv.com/forum.php
- * 公司网址：www.alientek.com
- * 购买地址：zhengdianyuanzi.tmall.com
- *
- * 修改说明
- * V1.0 20211026
- * 第一次发布
- *
- ****************************************************************************************************
- */
+  ******************************************************************************
+  * File Name          : SPI.c
+  * Description        : This file provides code for the configuration
+  *                      of the SPI instances.
+  ******************************************************************************
+  ** This notice applies to any and all portions of this file
+  * that are not between comment pairs USER CODE BEGIN and
+  * USER CODE END. Other portions of this file, whether 
+  * inserted by the user or by software development tools
+  * are owned by their respective copyright owners.
+  *
+  * COPYRIGHT(c) 2024 STMicroelectronics
+  *
+  * Redistribution and use in source and binary forms, with or without modification,
+  * are permitted provided that the following conditions are met:
+  *   1. Redistributions of source code must retain the above copyright notice,
+  *      this list of conditions and the following disclaimer.
+  *   2. Redistributions in binary form must reproduce the above copyright notice,
+  *      this list of conditions and the following disclaimer in the documentation
+  *      and/or other materials provided with the distribution.
+  *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  *      may be used to endorse or promote products derived from this software
+  *      without specific prior written permission.
+  *
+  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  *
+  ******************************************************************************
+  */
 
+/* Includes ------------------------------------------------------------------*/
 #include "spi.h"
 
-#include "stm32f4xx_hal_spi.h"
-#include "stm32f4xx_hal_pcd.h"
+#include "gpio.h"
 
+/* USER CODE BEGIN 0 */
 
-SPI_HandleTypeDef g_spi2_handler; /* SPI2句柄 */
+/* USER CODE END 0 */
 
-/**
- * @brief       SPI初始化代码
- *   @note      主机模式,8位数据,禁止硬件片选
- * @param       无
- * @retval      无
- */
-void spi2_init(void)
+SPI_HandleTypeDef hspi2;
+
+/* SPI2 init function */
+void MX_SPI2_Init(void)
 {
-    SPI2_SPI_CLK_ENABLE(); /* SPI2时钟使能 */
 
-    g_spi2_handler.Instance = SPI2_SPI;                                /* SPI2 */
-    g_spi2_handler.Init.Mode = SPI_MODE_MASTER;                        /* 设置SPI工作模式，设置为主模式 */
-    g_spi2_handler.Init.Direction = SPI_DIRECTION_2LINES;              /* 设置SPI单向或者双向的数据模式:SPI设置为双线模式 */
-    g_spi2_handler.Init.DataSize = SPI_DATASIZE_8BIT;                  /* 设置SPI的数据大小:SPI发送接收8位帧结构 */
-    g_spi2_handler.Init.CLKPolarity = SPI_POLARITY_HIGH;               /* 串行同步时钟的空闲状态为高电平 */
-    g_spi2_handler.Init.CLKPhase = SPI_PHASE_2EDGE;                    /* 串行同步时钟的第二个跳变沿（上升或下降）数据被采样 */
-    g_spi2_handler.Init.NSS = SPI_NSS_SOFT;                            /* NSS信号由硬件（NSS管脚）还是软件（使用SSI位）管理:内部NSS信号有SSI位控制 */
-    g_spi2_handler.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_256; /* 定义波特率预分频的值:波特率预分频值为256 */
-    g_spi2_handler.Init.FirstBit = SPI_FIRSTBIT_MSB;                   /* 指定数据传输从MSB位还是LSB位开始:数据传输从MSB位开始 */
-    g_spi2_handler.Init.TIMode = SPI_TIMODE_DISABLE;                   /* 关闭TI模式 */
-    g_spi2_handler.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;   /* 关闭硬件CRC校验 */
-    g_spi2_handler.Init.CRCPolynomial = 7;                             /* CRC值计算的多项式 */
-    HAL_SPI_Init(&g_spi2_handler);                                     /* 初始化 */
+  hspi2.Instance = SPI2;
+  hspi2.Init.Mode = SPI_MODE_MASTER;
+  hspi2.Init.Direction = SPI_DIRECTION_2LINES;
+  hspi2.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi2.Init.CLKPolarity = SPI_POLARITY_HIGH;
+  hspi2.Init.CLKPhase = SPI_PHASE_2EDGE;
+  hspi2.Init.NSS = SPI_NSS_SOFT;
+  hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_256;
+  hspi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  hspi2.Init.TIMode = SPI_TIMODE_DISABLE;
+  hspi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  hspi2.Init.CRCPolynomial = 10;
+  if (HAL_SPI_Init(&hspi2) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
 
-    __HAL_SPI_ENABLE(&g_spi2_handler); /* 使能SPI2 */
-
-    spi2_read_write_byte(0Xff); /* 启动传输, 实际上就是产生8个时钟脉冲, 达到清空DR的作用, 非必需 */
 }
 
-/**
- * @brief       SPI5底层驱动，时钟使能，引脚配置
- *   @note      此函数会被HAL_SPI_Init()调用
- * @param       hspi:SPI句柄
- * @retval      无
- */
-void HAL_SPI_MspInit(SPI_HandleTypeDef *hspi)
+void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
 {
-    GPIO_InitTypeDef GPIO_Initure;
-    if (hspi->Instance == SPI2_SPI)
-    {
-        SPI2_SCK_GPIO_CLK_ENABLE();  /* SPI2_SCK脚时钟使能 */
-        SPI2_MISO_GPIO_CLK_ENABLE(); /* SPI2_MISO脚时钟使能 */
-        SPI2_MOSI_GPIO_CLK_ENABLE(); /* SPI2_MOSI脚时钟使能 */
 
-        /* SCK引脚模式设置(复用输出) */
-        GPIO_Initure.Pin = SPI2_SCK_GPIO_PIN;
-        GPIO_Initure.Mode = GPIO_MODE_AF_PP;
-        GPIO_Initure.Pull = GPIO_PULLUP;
-        GPIO_Initure.Speed = GPIO_SPEED_FREQ_HIGH;
-        GPIO_Initure.Alternate = GPIO_AF5_SPI2;
-        HAL_GPIO_Init(SPI2_SCK_GPIO_PORT, &GPIO_Initure);
+  GPIO_InitTypeDef GPIO_InitStruct;
+  if(spiHandle->Instance==SPI2)
+  {
+  /* USER CODE BEGIN SPI2_MspInit 0 */
 
-        /* MISO引脚模式设置(复用输出) */
-        GPIO_Initure.Pin = SPI2_MISO_GPIO_PIN;
-        HAL_GPIO_Init(SPI2_MISO_GPIO_PORT, &GPIO_Initure);
+  /* USER CODE END SPI2_MspInit 0 */
+    /* SPI2 clock enable */
+    __HAL_RCC_SPI2_CLK_ENABLE();
+  
+    /**SPI2 GPIO Configuration    
+    PI1     ------> SPI2_SCK
+    PI2     ------> SPI2_MISO
+    PI3     ------> SPI2_MOSI 
+    */
+    GPIO_InitStruct.Pin = Spi2_sck_Pin|Spi2_miso_Pin|Spi2_mosi_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF5_SPI2;
+    HAL_GPIO_Init(GPIOI, &GPIO_InitStruct);
 
-        /* MOSI引脚模式设置(复用输出) */
-        GPIO_Initure.Pin = SPI2_MOSI_GPIO_PIN;
-        HAL_GPIO_Init(SPI2_MOSI_GPIO_PORT, &GPIO_Initure);
-    }
+  /* USER CODE BEGIN SPI2_MspInit 1 */
+
+  /* USER CODE END SPI2_MspInit 1 */
+  }
 }
 
+void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
+{
+
+  if(spiHandle->Instance==SPI2)
+  {
+  /* USER CODE BEGIN SPI2_MspDeInit 0 */
+
+  /* USER CODE END SPI2_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_SPI2_CLK_DISABLE();
+  
+    /**SPI2 GPIO Configuration    
+    PI1     ------> SPI2_SCK
+    PI2     ------> SPI2_MISO
+    PI3     ------> SPI2_MOSI 
+    */
+    HAL_GPIO_DeInit(GPIOI, Spi2_sck_Pin|Spi2_miso_Pin|Spi2_mosi_Pin);
+
+  /* USER CODE BEGIN SPI2_MspDeInit 1 */
+
+  /* USER CODE END SPI2_MspDeInit 1 */
+  }
+} 
+
+/* USER CODE BEGIN 1 */
 /**
  * @brief       SPI2速度设置函数
  *   @note      SPI2时钟选择来自APB1, 即PCLK1, 为36Mhz
@@ -103,10 +137,10 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef *hspi)
 void spi2_set_speed(uint8_t speed)
 {
     assert_param(IS_SPI_BAUDRATE_PRESCALER(speed)); /* 判断有效性 */
-    __HAL_SPI_DISABLE(&g_spi2_handler);             /* 关闭SPI */
-    g_spi2_handler.Instance->CR1 &= 0XFFC7;         /* 位3-5清零，用来设置波特率 */
-    g_spi2_handler.Instance->CR1 |= speed << 3;     /* 设置SPI速度 */
-    __HAL_SPI_ENABLE(&g_spi2_handler);              /* 使能SPI */
+    __HAL_SPI_DISABLE(&hspi2);             /* 关闭SPI */
+    hspi2.Instance->CR1 &= 0xFFC7;         /* 位3-5清零，用来设置波特率 */
+    hspi2.Instance->CR1 |= speed << 3;     /* 设置SPI速度 */
+    __HAL_SPI_ENABLE(&hspi2);              /* 使能SPI */
 }
 
 /**
@@ -117,6 +151,17 @@ void spi2_set_speed(uint8_t speed)
 uint8_t spi2_read_write_byte(uint8_t txdata)
 {
     uint8_t rxdata;
-    HAL_SPI_TransmitReceive(&g_spi2_handler, &txdata, &rxdata, 1, 1000);
+    HAL_SPI_TransmitReceive(&hspi2, &txdata, &rxdata, 1, 1000);
     return rxdata; /* 返回收到的数据 */
 }
+/* USER CODE END 1 */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

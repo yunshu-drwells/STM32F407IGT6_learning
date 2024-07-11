@@ -32,6 +32,7 @@ usbdevice\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 usbdevice\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 usbdevice\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 usbdevice\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+usbdevice\main.o: ../Inc/spi.h
 usbdevice\main.o: ../Inc/usart.h
 usbdevice\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 usbdevice\main.o: ../Inc/usb_otg.h

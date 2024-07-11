@@ -3,7 +3,7 @@
 <title>Static Call Graph - [W25Q128\W25Q128.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image W25Q128\W25Q128.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Tue Jul 09 18:31:29 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Thu Jul 11 12:01:30 2024
 <BR><P>
 <H3>Maximum Stack Usage =        216 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -484,7 +484,6 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;norflash_init
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
@@ -825,8 +824,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;norflash_write
 </UL>
 
-<P><STRONG><a name="[93]"></a>norflash_init</STRONG> (Thumb, 132 bytes, Stack size 40 bytes, norflash.o(i.norflash_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = norflash_init &rArr; norflash_write_sr &rArr; spi2_read_write_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[93]"></a>norflash_init</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, norflash.o(i.norflash_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = norflash_init &rArr; norflash_write_sr &rArr; spi2_read_write_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi2_set_speed
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi2_read_write_byte
@@ -834,7 +833,6 @@ Global Symbols
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;norflash_write_enable
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;norflash_read_sr
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;norflash_read_id
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main

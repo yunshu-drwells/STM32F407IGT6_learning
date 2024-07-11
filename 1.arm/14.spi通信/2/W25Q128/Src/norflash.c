@@ -11,17 +11,21 @@ void norflash_init(void)
 {
     uint8_t temp;
 
-    NORFLASH_CS_GPIO_CLK_ENABLE();      /* NORFLASH CS脚 时钟使能 */
+		//CS引脚在gpio.c->MX_GPIO_Init中完成了初始化，在main中已经调用
+		/*
+    NORFLASH_CS_GPIO_CLK_ENABLE();      // NORFLASH CS脚 时钟使能 
 
     GPIO_InitTypeDef gpio_init_struct;
     gpio_init_struct.Pin = NORFLASH_CS_GPIO_PIN;
     gpio_init_struct.Mode = GPIO_MODE_OUTPUT_PP;
     gpio_init_struct.Pull = GPIO_PULLUP;
     gpio_init_struct.Speed = GPIO_SPEED_FREQ_HIGH;
-    HAL_GPIO_Init(NORFLASH_CS_GPIO_PORT, &gpio_init_struct); /* CS引脚模式设置(复用输出) */
-
+    HAL_GPIO_Init(NORFLASH_CS_GPIO_PORT, &gpio_init_struct); // CS引脚模式设置(复用输出) 
+		*/
+		//SPI2引脚初始化在HAL_SPI_MspInit中，调用关系是MX_SPI2_Init->HAL_SPI_Init->HAL_SPI_MspInit(MX_SPI2_Init在main函数中调用)
     NORFLASH_CS(1);                         /* 取消片选 */
 
+		//SPI2初始化在spi.c->MX_SPI2_Init
     //spi2_init();                            /* 初始化SPI2 */
     spi2_set_speed(SPI_SPEED_4);            /* SPI2 切换到高速状态 21Mhz */
     
