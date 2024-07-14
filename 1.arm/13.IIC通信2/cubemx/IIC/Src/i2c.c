@@ -129,13 +129,6 @@ void HAL_I2C_MspDeInit(I2C_HandleTypeDef* i2cHandle)
 } 
 
 /* USER CODE BEGIN 1 */
-int fputc(int ch, FILE *p)
-{
-    while(!(USART1->SR & (1<<7)));
-    USART1->DR = ch;
-    return ch;
-}
-
 void Eeprom_Write(uint16_t MemAddr, uint8_t *W, uint16_t len)
 {
     while(len--)

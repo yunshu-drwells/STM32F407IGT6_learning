@@ -50,8 +50,9 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-uint8_t W[20] = "--Ready--";
-uint8_t R[20] = {0};
+uint8_t W[] = "--Ready--";
+#define TEXT_SIZE sizeof(W) /* TEXT字符串长度 */
+uint8_t R[TEXT_SIZE] = {0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -99,9 +100,9 @@ int main(void)
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 	printf("I2C2 EEPROM test!\n");
-	Eeprom_Write(0, W, sizeof(W));
+	Eeprom_Write(0, W, TEXT_SIZE);
 	HAL_Delay(1000);
-	Eeprom_Read(0, R, sizeof(R));
+	Eeprom_Read(0, R, TEXT_SIZE);
 	printf("Read: %s\n", R);
 	
   /* USER CODE END 2 */

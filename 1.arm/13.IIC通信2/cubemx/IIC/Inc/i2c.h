@@ -48,7 +48,6 @@
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-int fputc(int ch, FILE *p);
 void Eeprom_Write(uint16_t MemAddr, uint8_t *W, uint16_t len);
 void Eeprom_Read(uint16_t MemAddr, uint8_t *R, uint16_t len);
 /* USER CODE END Includes */

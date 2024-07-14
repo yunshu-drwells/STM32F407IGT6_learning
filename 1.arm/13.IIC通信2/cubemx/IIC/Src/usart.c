@@ -121,7 +121,12 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 } 
 
 /* USER CODE BEGIN 1 */
-
+int fputc(int ch, FILE *f)
+{
+    while((USART1->SR & 0X40)==0);
+    USART1->DR = (uint8_t) ch;
+    return ch;
+}
 /* USER CODE END 1 */
 
 /**
