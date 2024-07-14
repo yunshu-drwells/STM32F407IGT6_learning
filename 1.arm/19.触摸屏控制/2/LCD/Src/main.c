@@ -38,6 +38,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f4xx_hal.h"
+#include "i2c.h"
 #include "usart.h"
 #include "gpio.h"
 #include "fsmc.h"
@@ -117,6 +118,7 @@ int main(void)
   MX_GPIO_Init();
   MX_FSMC_Init();
   MX_USART1_UART_Init();
+  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 	delay_init(168);                    /* 延时初始化 */
 	lcd_init();                         /* 初始化LCD */

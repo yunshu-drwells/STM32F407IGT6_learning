@@ -30,7 +30,8 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "touch.h"
-#include "24cxx.h"  //at24cxx_write
+//#include "24cxx.h"  //at24cxx_write
+#include "i2c.h"
 #include "lcd.h"  //colors
 #include "usart.h"  //printf fputc
 #include "delay.h"  //delay_us
@@ -329,8 +330,8 @@ void tp_save_adjust_data(void)
      * p+12用于存放标记电阻触摸屏是否校准的数据(0X0A)
      * 往p[12]写入0X0A. 标记已经校准过.
      */
-    at24cxx_write(TP_SAVE_ADDR_BASE, p, 12);                /* 保存12个字节数据(xfac,yfac,xc,yc) */
-    at24cxx_write_one_byte(TP_SAVE_ADDR_BASE + 12, 0X0A);   /* 保存校准值 */
+    Eeprom_Write(TP_SAVE_ADDR_BASE, p, 12);                /* 保存12个字节数据(xfac,yfac,xc,yc) */
+    //at24cxx_write_one_byte(TP_SAVE_ADDR_BASE + 12, 0X0A);   /* 保存校准值 */
 }
 
 /**
@@ -342,19 +343,21 @@ void tp_save_adjust_data(void)
 uint8_t tp_get_adjust_data(void)
 {
     uint8_t *p = (uint8_t *)&tp_dev.xfac;
-    uint8_t temp = 0;
+    //uint8_t temp = 0;
 
     /* 由于我们是直接指向tp_dev.xfac地址进行保存的, 读取的时候,将读取出来的数据
      * 写入指向tp_dev.xfac的首地址, 就可以还原写入进去的值, 而不需要理会具体的数
      * 据类型. 此方法适用于各种数据(包括结构体)的保存/读取(包括结构体).
      */
-    at24cxx_read(TP_SAVE_ADDR_BASE, p, 12);                 /* 读取12字节数据 */
-    temp = at24cxx_read_one_byte(TP_SAVE_ADDR_BASE + 12);   /* 读取校准状态标记 */
+    Eeprom_Read(TP_SAVE_ADDR_BASE, p, 12);                 /* 读取12字节数据 */
+		/*
+    temp = at24cxx_read_one_byte(TP_SAVE_ADDR_BASE + 12);   // 读取校准状态标记 
 
     if (temp == 0X0A)
     {
         return 1;
     }
+		*/
 
     return 0;
 }
@@ -523,24 +526,24 @@ uint8_t tp_init(void)
         {
             tp_dev.scan = gt9xxx_scan;  /* 扫描函数指向GT9147触摸屏扫描 */
             tp_dev.touchtype |= 0X80;   /* 电容屏 */
-						printf("No correct!\n");
+						//printf("No correct!\n");
             return 0;
         }
     }
 		
     if (lcddev.id == 0X5510 || lcddev.id == 0X9806 || lcddev.id == 0X4342 || lcddev.id == 0X4384 || lcddev.id == 0X1018)  /* 电容触摸屏,4.3寸/10.1寸屏 */
     {
-				printf("Screen id is 0X5510、0X9806、0X4342、0X4384、0X1018！\n");
+				printf("Screen id is 0X5510 | 0X9806 | 0X4342 | 0X4384 | 0X1018!\n");
         gt9xxx_init();
         tp_dev.scan = gt9xxx_scan;  /* 扫描函数指向GT9147触摸屏扫描 */
         tp_dev.touchtype |= 0X80;   /* 电容屏 */
-				printf("No correct!\n");
+				//printf("No correct!\n");
         return 0;
     }
 		
     else if (lcddev.id == 0X1963 || lcddev.id == 0X7084 || lcddev.id == 0X7016)     /* SSD1963 7寸屏或者 7寸800*480/1024*600 RGB屏 */
     {
-				printf("Screen id is 0X1963、0X7084、0X7016！\n");
+				printf("Screen id is 0X1963 | 0X7084 | 0X7016!\n");
 				/*
 				if (!gt9xxx_init())             // 触摸IC是FT系列的就执行ft5206_init函数以及使用ft5206_scan扫描函数 
         {
@@ -569,7 +572,7 @@ uint8_t tp_init(void)
         }
 
         tp_dev.touchtype |= 0X80;       // 电容屏 
-				printf("0X1963、0X7084、0X7016 is no correct!\n");
+				//printf("0X1963 | 0X7084 | 0X7016 is no correct!\n");
         return 0;
     }
     else
@@ -603,7 +606,7 @@ uint8_t tp_init(void)
         HAL_GPIO_Init(T_CS_GPIO_PORT, &gpio_init_struct);        /* 初始化T_CS引脚 */
 
         tp_read_xy(&tp_dev.x[0], &tp_dev.y[0]); /* 第一次读取初始化 */
-        at24cxx_init();         /* 初始化24CXX */
+        //at24cxx_init();         /* 初始化24CXX */
 
         if (tp_get_adjust_data())
         {

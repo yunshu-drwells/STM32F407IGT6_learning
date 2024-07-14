@@ -1393,25 +1393,25 @@ Image Symbol Table
     tp_draw_touch_point                      0x08006a9d   Thumb Code   126  touch.o(i.tp_draw_touch_point)
     i.tp_get_adjust_data                     0x08006b1c   Section        0  touch.o(i.tp_get_adjust_data)
     i.tp_init                                0x08006b40   Section        0  touch.o(i.tp_init)
-    i.tp_read_ad                             0x08006e44   Section        0  touch.o(i.tp_read_ad)
-    tp_read_ad                               0x08006e45   Thumb Code   242  touch.o(i.tp_read_ad)
-    i.tp_read_xoy                            0x08006f44   Section        0  touch.o(i.tp_read_xoy)
-    tp_read_xoy                              0x08006f45   Thumb Code   100  touch.o(i.tp_read_xoy)
-    i.tp_read_xy                             0x08006fa8   Section        0  touch.o(i.tp_read_xy)
-    tp_read_xy                               0x08006fa9   Thumb Code    48  touch.o(i.tp_read_xy)
-    i.tp_read_xy2                            0x08006fdc   Section        0  touch.o(i.tp_read_xy2)
-    tp_read_xy2                              0x08006fdd   Thumb Code   114  touch.o(i.tp_read_xy2)
-    i.tp_save_adjust_data                    0x08007050   Section        0  touch.o(i.tp_save_adjust_data)
-    i.tp_scan                                0x0800706c   Section        0  touch.o(i.tp_scan)
-    tp_scan                                  0x0800706d   Thumb Code   198  touch.o(i.tp_scan)
-    .constdata                               0x08007140   Section       16  system_stm32f4xx.o(.constdata)
-    .constdata                               0x08007150   Section        8  system_stm32f4xx.o(.constdata)
-    .constdata                               0x08007158   Section       20  main.o(.constdata)
-    .constdata                               0x0800716c   Section    12160  lcd.o(.constdata)
-    .constdata                               0x0800a0ec   Section       10  ft5206.o(.constdata)
-    .constdata                               0x0800a0f6   Section       20  gt9xxx.o(.constdata)
-    .constdata                               0x0800a10c   Section        4  touch.o(.constdata)
-    .conststring                             0x0800a110   Section      121  touch.o(.conststring)
+    i.tp_read_ad                             0x08006e1c   Section        0  touch.o(i.tp_read_ad)
+    tp_read_ad                               0x08006e1d   Thumb Code   242  touch.o(i.tp_read_ad)
+    i.tp_read_xoy                            0x08006f1c   Section        0  touch.o(i.tp_read_xoy)
+    tp_read_xoy                              0x08006f1d   Thumb Code   100  touch.o(i.tp_read_xoy)
+    i.tp_read_xy                             0x08006f80   Section        0  touch.o(i.tp_read_xy)
+    tp_read_xy                               0x08006f81   Thumb Code    48  touch.o(i.tp_read_xy)
+    i.tp_read_xy2                            0x08006fb4   Section        0  touch.o(i.tp_read_xy2)
+    tp_read_xy2                              0x08006fb5   Thumb Code   114  touch.o(i.tp_read_xy2)
+    i.tp_save_adjust_data                    0x08007028   Section        0  touch.o(i.tp_save_adjust_data)
+    i.tp_scan                                0x08007044   Section        0  touch.o(i.tp_scan)
+    tp_scan                                  0x08007045   Thumb Code   198  touch.o(i.tp_scan)
+    .constdata                               0x08007118   Section       16  system_stm32f4xx.o(.constdata)
+    .constdata                               0x08007128   Section        8  system_stm32f4xx.o(.constdata)
+    .constdata                               0x08007130   Section       20  main.o(.constdata)
+    .constdata                               0x08007144   Section    12160  lcd.o(.constdata)
+    .constdata                               0x0800a0c4   Section       10  ft5206.o(.constdata)
+    .constdata                               0x0800a0ce   Section       20  gt9xxx.o(.constdata)
+    .constdata                               0x0800a0e4   Section        4  touch.o(.constdata)
+    .conststring                             0x0800a0e8   Section      121  touch.o(.conststring)
     .data                                    0x20000000   Section       12  stm32f4xx_hal.o(.data)
     .data                                    0x2000000c   Section        4  system_stm32f4xx.o(.data)
     .data                                    0x20000010   Section        1  main.o(.data)
@@ -1730,20 +1730,20 @@ Image Symbol Table
     tp_adjust                                0x080065e1   Thumb Code   800  touch.o(i.tp_adjust)
     tp_draw_big_point                        0x08006a69   Thumb Code    52  touch.o(i.tp_draw_big_point)
     tp_get_adjust_data                       0x08006b1d   Thumb Code    30  touch.o(i.tp_get_adjust_data)
-    tp_init                                  0x08006b41   Thumb Code   442  touch.o(i.tp_init)
-    tp_save_adjust_data                      0x08007051   Thumb Code    24  touch.o(i.tp_save_adjust_data)
-    AHBPrescTable                            0x08007140   Data          16  system_stm32f4xx.o(.constdata)
-    APBPrescTable                            0x08007150   Data           8  system_stm32f4xx.o(.constdata)
-    POINT_COLOR_TBL                          0x08007158   Data          20  main.o(.constdata)
-    asc2_1206                                0x0800716c   Data        1140  lcd.o(.constdata)
-    asc2_1608                                0x080075e0   Data        1520  lcd.o(.constdata)
-    asc2_2412                                0x08007bd0   Data        3420  lcd.o(.constdata)
-    asc2_3216                                0x0800892c   Data        6080  lcd.o(.constdata)
-    FT5206_TPX_TBL                           0x0800a0ec   Data          10  ft5206.o(.constdata)
-    GT9XXX_TPX_TBL                           0x0800a0f6   Data          20  gt9xxx.o(.constdata)
-    TP_REMIND_MSG_TBL                        0x0800a10c   Data           4  touch.o(.constdata)
-    Region$$Table$$Base                      0x0800a18c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800a1ac   Number         0  anon$$obj.o(Region$$Table)
+    tp_init                                  0x08006b41   Thumb Code   440  touch.o(i.tp_init)
+    tp_save_adjust_data                      0x08007029   Thumb Code    24  touch.o(i.tp_save_adjust_data)
+    AHBPrescTable                            0x08007118   Data          16  system_stm32f4xx.o(.constdata)
+    APBPrescTable                            0x08007128   Data           8  system_stm32f4xx.o(.constdata)
+    POINT_COLOR_TBL                          0x08007130   Data          20  main.o(.constdata)
+    asc2_1206                                0x08007144   Data        1140  lcd.o(.constdata)
+    asc2_1608                                0x080075b8   Data        1520  lcd.o(.constdata)
+    asc2_2412                                0x08007ba8   Data        3420  lcd.o(.constdata)
+    asc2_3216                                0x08008904   Data        6080  lcd.o(.constdata)
+    FT5206_TPX_TBL                           0x0800a0c4   Data          10  ft5206.o(.constdata)
+    GT9XXX_TPX_TBL                           0x0800a0ce   Data          20  gt9xxx.o(.constdata)
+    TP_REMIND_MSG_TBL                        0x0800a0e4   Data           4  touch.o(.constdata)
+    Region$$Table$$Base                      0x0800a164   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800a184   Number         0  anon$$obj.o(Region$$Table)
     uwTickFreq                               0x20000000   Data           1  stm32f4xx_hal.o(.data)
     uwTickPrio                               0x20000004   Data           4  stm32f4xx_hal.o(.data)
     uwTick                                   0x20000008   Data           4  stm32f4xx_hal.o(.data)
@@ -1765,9 +1765,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000a220, Max: 0x00100000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000a1f8, Max: 0x00100000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000a1ac, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000a184, Max: 0x00100000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1941,25 +1941,25 @@ Memory Map of the image
     0x08006a9c   0x0000007e   Code   RO         2544    i.tp_draw_touch_point  touch.o
     0x08006b1a   0x00000002   PAD
     0x08006b1c   0x00000024   Code   RO         2545    i.tp_get_adjust_data  touch.o
-    0x08006b40   0x00000304   Code   RO         2546    i.tp_init           touch.o
-    0x08006e44   0x00000100   Code   RO         2547    i.tp_read_ad        touch.o
-    0x08006f44   0x00000064   Code   RO         2548    i.tp_read_xoy       touch.o
-    0x08006fa8   0x00000034   Code   RO         2549    i.tp_read_xy        touch.o
-    0x08006fdc   0x00000072   Code   RO         2550    i.tp_read_xy2       touch.o
-    0x0800704e   0x00000002   PAD
-    0x08007050   0x0000001c   Code   RO         2551    i.tp_save_adjust_data  touch.o
-    0x0800706c   0x000000d4   Code   RO         2552    i.tp_scan           touch.o
-    0x08007140   0x00000010   Data   RO         1762    .constdata          system_stm32f4xx.o
-    0x08007150   0x00000008   Data   RO         1763    .constdata          system_stm32f4xx.o
-    0x08007158   0x00000014   Data   RO         1808    .constdata          main.o
-    0x0800716c   0x00002f80   Data   RO         2163    .constdata          lcd.o
-    0x0800a0ec   0x0000000a   Data   RO         2443    .constdata          ft5206.o
-    0x0800a0f6   0x00000014   Data   RO         2499    .constdata          gt9xxx.o
-    0x0800a10a   0x00000002   PAD
-    0x0800a10c   0x00000004   Data   RO         2553    .constdata          touch.o
-    0x0800a110   0x00000079   Data   RO         2554    .conststring        touch.o
-    0x0800a189   0x00000003   PAD
-    0x0800a18c   0x00000020   Data   RO         3114    Region$$Table       anon$$obj.o
+    0x08006b40   0x000002dc   Code   RO         2546    i.tp_init           touch.o
+    0x08006e1c   0x00000100   Code   RO         2547    i.tp_read_ad        touch.o
+    0x08006f1c   0x00000064   Code   RO         2548    i.tp_read_xoy       touch.o
+    0x08006f80   0x00000034   Code   RO         2549    i.tp_read_xy        touch.o
+    0x08006fb4   0x00000072   Code   RO         2550    i.tp_read_xy2       touch.o
+    0x08007026   0x00000002   PAD
+    0x08007028   0x0000001c   Code   RO         2551    i.tp_save_adjust_data  touch.o
+    0x08007044   0x000000d4   Code   RO         2552    i.tp_scan           touch.o
+    0x08007118   0x00000010   Data   RO         1762    .constdata          system_stm32f4xx.o
+    0x08007128   0x00000008   Data   RO         1763    .constdata          system_stm32f4xx.o
+    0x08007130   0x00000014   Data   RO         1808    .constdata          main.o
+    0x08007144   0x00002f80   Data   RO         2163    .constdata          lcd.o
+    0x0800a0c4   0x0000000a   Data   RO         2443    .constdata          ft5206.o
+    0x0800a0ce   0x00000014   Data   RO         2499    .constdata          gt9xxx.o
+    0x0800a0e2   0x00000002   PAD
+    0x0800a0e4   0x00000004   Data   RO         2553    .constdata          touch.o
+    0x0800a0e8   0x00000079   Data   RO         2554    .conststring        touch.o
+    0x0800a161   0x00000003   PAD
+    0x0800a164   0x00000020   Data   RO         3114    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000518, Max: 0x00020000, ABSOLUTE)
@@ -1992,33 +1992,33 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       196          0          0          0          0       3419   24cxx.o
-       660         38          0          0          0       5774   ctiic.o
-        80         10          0          4          0       2707   delay.o
-       300         44          0          8         80       2455   fsmc.o
-       798         80         10          1          0       4073   ft5206.o
-       204         12          0          0          0       1107   gpio.o
-       998         72         20          2          0       4259   gt9xxx.o
-     13072        138      12160          4         14      28400   lcd.o
-      1252        198         20          1          0       7070   main.o
-       640         42          0          0          0       5634   myiic.o
-        36          8        392          0       1024        872   startup_stm32f407xx.o
-       144         24          0         12          0       4181   stm32f4xx_hal.o
-       206         14          0          0          0      31796   stm32f4xx_hal_cortex.o
-         0          0          0          0          0     667836   stm32f4xx_hal_flash_ramfunc.o
-       460         44          0          0          0       3892   stm32f4xx_hal_gpio.o
-        88          0          0          0          0        562   stm32f4xx_hal_msp.o
-      1272         82          0          0          0       5904   stm32f4xx_hal_rcc.o
-        86          0          0          0          0       1292   stm32f4xx_hal_sram.o
-       782          8          0          0          0       2176   stm32f4xx_hal_uart.o
-        30          0          0          0          0       4482   stm32f4xx_it.o
-       216         12          0          0          0       2863   stm32f4xx_ll_fsmc.o
-        84         18         24          4          0       1279   system_stm32f4xx.o
-      2908        484        125         72          0      12214   touch.o
-       172         44          0          0         64       2346   usart.o
+       196          0          0          0          0       3267   24cxx.o
+       660         38          0          0          0       5546   ctiic.o
+        80         10          0          4          0       2559   delay.o
+       300         44          0          8         80       2331   fsmc.o
+       798         80         10          1          0       3925   ft5206.o
+       204         12          0          0          0       1059   gpio.o
+       998         72         20          2          0       4111   gt9xxx.o
+     13072        138      12160          4         14      27632   lcd.o
+      1252        198         20          1          0       6814   main.o
+       640         42          0          0          0       5410   myiic.o
+        36          8        392          0       1024        840   startup_stm32f407xx.o
+       144         24          0         12          0       4029   stm32f4xx_hal.o
+       206         14          0          0          0      31584   stm32f4xx_hal_cortex.o
+         0          0          0          0          0     667556   stm32f4xx_hal_flash_ramfunc.o
+       460         44          0          0          0       3772   stm32f4xx_hal_gpio.o
+        88          0          0          0          0        538   stm32f4xx_hal_msp.o
+      1272         82          0          0          0       5732   stm32f4xx_hal_rcc.o
+        86          0          0          0          0       1240   stm32f4xx_hal_sram.o
+       782          8          0          0          0       2100   stm32f4xx_hal_uart.o
+        30          0          0          0          0       4262   stm32f4xx_it.o
+       216         12          0          0          0       2767   stm32f4xx_ll_fsmc.o
+        84         18         24          4          0       1203   system_stm32f4xx.o
+      2868        446        125         72          0      11834   touch.o
+       172         44          0          0         64       2226   usart.o
 
     ----------------------------------------------------------------------
-     24708       1372      12788        112       1188     806593   Object Totals
+     24668       1334      12788        112       1188     802337   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         24          0          5          4          6          0   (incl. Padding)
 
@@ -2077,15 +2077,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     28600       1484      12788        116       1188     796129   Grand Totals
-     28600       1484      12788        116       1188     796129   ELF Image Totals
-     28600       1484      12788        116          0          0   ROM Totals
+     28560       1446      12788        116       1188     791873   Grand Totals
+     28560       1446      12788        116       1188     791873   ELF Image Totals
+     28560       1446      12788        116          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                41388 (  40.42kB)
+    Total RO  Size (Code + RO Data)                41348 (  40.38kB)
     Total RW  Size (RW Data + ZI Data)              1304 (   1.27kB)
-    Total ROM Size (Code + RO Data + RW Data)      41504 (  40.53kB)
+    Total ROM Size (Code + RO Data + RW Data)      41464 (  40.49kB)
 
 ==============================================================================
 

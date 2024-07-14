@@ -17,6 +17,8 @@
 "lcd\stm32f4xx_hal_tim_ex.o"
 "lcd\stm32f4xx_hal_dma.o"
 "lcd\stm32f4xx_hal_pwr.o"
+"lcd\stm32f4xx_hal_i2c.o"
+"lcd\stm32f4xx_hal_i2c_ex.o"
 "lcd\system_stm32f4xx.o"
 "lcd\main.o"
 "lcd\fsmc.o"
@@ -29,9 +31,8 @@
 "lcd\ft5206.o"
 "lcd\gt9xxx.o"
 "lcd\touch.o"
-"lcd\myiic.o"
+"lcd\i2c.o"
 "lcd\delay.o"
-"lcd\24cxx.o"
 --library_type=microlib --strict --scatter "LCD\LCD.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

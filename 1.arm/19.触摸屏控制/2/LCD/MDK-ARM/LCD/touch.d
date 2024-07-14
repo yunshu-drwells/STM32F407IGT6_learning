@@ -31,14 +31,15 @@ lcd\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 lcd\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
 lcd\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
 lcd\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
+lcd\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+lcd\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 lcd\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 lcd\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 lcd\touch.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 lcd\touch.o: ../Drivers/CMSIS/Include/core_cm4.h
 lcd\touch.o: ../Inc/ft5206.h
 lcd\touch.o: ../Drivers/CMSIS/Include/core_cm4.h
-lcd\touch.o: ../Inc/24cxx.h
-lcd\touch.o: ../Drivers/CMSIS/Include/core_cm4.h
+lcd\touch.o: ../Inc/i2c.h
 lcd\touch.o: ../Inc/lcd.h
 lcd\touch.o: ../Inc/usart.h
 lcd\touch.o: ../Inc/delay.h

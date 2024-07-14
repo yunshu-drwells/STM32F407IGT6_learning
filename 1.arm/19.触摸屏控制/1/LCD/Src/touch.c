@@ -530,7 +530,7 @@ uint8_t tp_init(void)
 		
     if (lcddev.id == 0X5510 || lcddev.id == 0X9806 || lcddev.id == 0X4342 || lcddev.id == 0X4384 || lcddev.id == 0X1018)  /* 电容触摸屏,4.3寸/10.1寸屏 */
     {
-				printf("Screen id is 0X5510、0X9806、0X4342、0X4384、0X1018！\n");
+				printf("Screen id is 0X5510 | 0X9806 | 0X4342 | 0X4384 | 0X1018!\n");
         gt9xxx_init();
         tp_dev.scan = gt9xxx_scan;  /* 扫描函数指向GT9147触摸屏扫描 */
         tp_dev.touchtype |= 0X80;   /* 电容屏 */
@@ -540,7 +540,7 @@ uint8_t tp_init(void)
 		
     else if (lcddev.id == 0X1963 || lcddev.id == 0X7084 || lcddev.id == 0X7016)     /* SSD1963 7寸屏或者 7寸800*480/1024*600 RGB屏 */
     {
-				printf("Screen id is 0X1963、0X7084、0X7016！\n");
+				printf("Screen id is 0X1963 | 0X7084 | 0X7016!\n");
 				/*
 				if (!gt9xxx_init())             // 触摸IC是FT系列的就执行ft5206_init函数以及使用ft5206_scan扫描函数 
         {
@@ -569,7 +569,7 @@ uint8_t tp_init(void)
         }
 
         tp_dev.touchtype |= 0X80;       // 电容屏 
-				printf("0X1963、0X7084、0X7016 is no correct!\n");
+				//printf("0X1963 | 0X7084 | 0X7016 is no correct!\n");
         return 0;
     }
     else
