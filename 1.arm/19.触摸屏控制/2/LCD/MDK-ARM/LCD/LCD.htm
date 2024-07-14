@@ -3,7 +3,7 @@
 <title>Static Call Graph - [LCD\LCD.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image LCD\LCD.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Mon Jul 15 02:55:59 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Mon Jul 15 04:24:48 2024
 <BR><P>
 <H3>Maximum Stack Usage =        380 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -621,12 +621,12 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = HAL_GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspInit
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_init
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gt9xxx_init
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ft5206_init
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FSMC_MspInit
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspInit
 </UL>
 
 <P><STRONG><a name="[b9]"></a>HAL_GPIO_ReadPin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_ReadPin))
@@ -1187,7 +1187,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ft5206_init
 </UL>
 
-<P><STRONG><a name="[c5]"></a>gt9xxx_init</STRONG> (Thumb, 200 bytes, Stack size 40 bytes, gt9xxx.o(i.gt9xxx_init))
+<P><STRONG><a name="[c5]"></a>gt9xxx_init</STRONG> (Thumb, 222 bytes, Stack size 40 bytes, gt9xxx.o(i.gt9xxx_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = gt9xxx_init &rArr; gt9xxx_wr_reg &rArr; ct_iic_wait_ack &rArr; ct_iic_stop &rArr; delay_us
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
@@ -1303,11 +1303,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_ram_prepare
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_set_cursor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_draw_touch_point
+<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_draw_big_point
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_draw_touch_point
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_show_char
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_draw_line
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_draw_circle
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_draw_big_point
 </UL>
 
 <P><STRONG><a name="[d5]"></a>lcd_ex_ili9341_reginit</STRONG> (Thumb, 558 bytes, Stack size 8 bytes, lcd.o(i.lcd_ex_ili9341_reginit))
@@ -1550,13 +1550,13 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 332<LI>Call Chain = rtp_test &rArr; tp_adjust &rArr; tp_adjust_info_show &rArr; lcd_show_string &rArr; lcd_show_char &rArr; lcd_draw_point &rArr; lcd_set_cursor &rArr; lcd_wr_regno
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_save_adjust_data
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_draw_big_point
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_adjust
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_draw_dialog
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_scan
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_save_adjust_data
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_draw_big_point
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1564,7 +1564,8 @@ Global Symbols
 <P><STRONG><a name="[65]"></a>tp_adjust</STRONG> (Thumb, 800 bytes, Stack size 112 bytes, touch.o(i.tp_adjust))
 <BR><BR>[Stack]<UL><LI>Max Depth = 332<LI>Call Chain = tp_adjust &rArr; tp_adjust_info_show &rArr; lcd_show_string &rArr; lcd_show_char &rArr; lcd_draw_point &rArr; lcd_set_cursor &rArr; lcd_wr_regno
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_show_string
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_save_adjust_data
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_show_string
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
@@ -1574,7 +1575,6 @@ Global Symbols
 <LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_draw_touch_point
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_adjust_info_show
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_save_adjust_data
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtp_test
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_init
@@ -1602,13 +1602,13 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 380<LI>Call Chain = tp_init &rArr; tp_adjust &rArr; tp_adjust_info_show &rArr; lcd_show_string &rArr; lcd_show_char &rArr; lcd_draw_point &rArr; lcd_set_cursor &rArr; lcd_wr_regno
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_save_adjust_data
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_adjust
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_get_adjust_data
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_read_xy
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gt9xxx_init
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ft5206_init
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_save_adjust_data
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> touch.o(.data)

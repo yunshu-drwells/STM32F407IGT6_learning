@@ -109,6 +109,7 @@ uint8_t gt9xxx_init(void)
 {
     GPIO_InitTypeDef gpio_init_struct;
     uint8_t temp[5];
+		//RST引脚和INT引脚 在MX_GPIO_Init中已经完成了初始化(main.c->gpio.c)
 		/*
     GT9XXX_RST_GPIO_CLK_ENABLE();   // RST引脚时钟使能 
     GT9XXX_INT_GPIO_CLK_ENABLE();   // INT引脚时钟使能 
@@ -148,6 +149,8 @@ uint8_t gt9xxx_init(void)
     /* 判断一下是否是特定的触摸屏 */
     if ( strcmp((char *)temp, "911") && strcmp((char *)temp, "9147") && strcmp((char *)temp, "1158") && strcmp((char *)temp, "9271"))
     {
+				printf("CTP ID:%s\r\n", temp);          /* 打印ID */
+				printf("init failed!\n");
         return 1;   /* 若不是触摸屏用到的GT911/9147/1158/9271，则初始化失败，需硬件查看触摸IC型号以及查看时序函数是否正确 */
     }
 

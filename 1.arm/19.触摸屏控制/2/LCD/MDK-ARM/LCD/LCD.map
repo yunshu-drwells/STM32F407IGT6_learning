@@ -351,9 +351,6 @@ Section Cross References
     main.o(i.rtp_test) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_TogglePin) for HAL_GPIO_TogglePin
     main.o(i.rtp_test) refers to lcd.o(.bss) for lcddev
     main.o(i.rtp_test) refers to touch.o(.data) for tp_dev
-    main.o(i.sys_stm32_clock_init) refers to stm32f4xx_hal_rcc.o(i.HAL_RCC_OscConfig) for HAL_RCC_OscConfig
-    main.o(i.sys_stm32_clock_init) refers to stm32f4xx_hal_rcc.o(i.HAL_RCC_ClockConfig) for HAL_RCC_ClockConfig
-    main.o(i.sys_stm32_clock_init) refers to stm32f4xx_hal.o(i.HAL_GetREVID) for HAL_GetREVID
     fsmc.o(i.HAL_FSMC_MspInit) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
     fsmc.o(i.HAL_FSMC_MspInit) refers to fsmc.o(.data) for .data
     fsmc.o(i.HAL_SRAM_MspDeInit) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_DeInit) for HAL_GPIO_DeInit
@@ -508,8 +505,8 @@ Section Cross References
     gt9xxx.o(i.gt9xxx_init) refers to delay.o(i.delay_ms) for delay_ms
     gt9xxx.o(i.gt9xxx_init) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
     gt9xxx.o(i.gt9xxx_init) refers to gt9xxx.o(i.gt9xxx_rd_reg) for gt9xxx_rd_reg
-    gt9xxx.o(i.gt9xxx_init) refers to strcmp.o(.text) for strcmp
     gt9xxx.o(i.gt9xxx_init) refers to printfa.o(i.__0printf) for __2printf
+    gt9xxx.o(i.gt9xxx_init) refers to strcmp.o(.text) for strcmp
     gt9xxx.o(i.gt9xxx_init) refers to gt9xxx.o(i.gt9xxx_wr_reg) for gt9xxx_wr_reg
     gt9xxx.o(i.gt9xxx_init) refers to gt9xxx.o(.data) for .data
     gt9xxx.o(i.gt9xxx_rd_reg) refers to ctiic.o(i.ct_iic_start) for ct_iic_start
@@ -1196,7 +1193,6 @@ Removing Unused input sections from the image.
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
     Removing main.o(.rrx_text), (6 bytes).
-    Removing main.o(i.sys_stm32_clock_init), (148 bytes).
     Removing main.o(.bss), (12 bytes).
     Removing main.o(.data), (24 bytes).
     Removing main.o(.data), (1 bytes).
@@ -1251,7 +1247,7 @@ Removing Unused input sections from the image.
     Removing delay.o(.rrx_text), (6 bytes).
     Removing dneg.o(.text), (6 bytes).
 
-377 unused section(s) (total 24935 bytes) removed from the image.
+376 unused section(s) (total 24787 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1512,68 +1508,68 @@ Image Symbol Table
     i.ft5206_scan                            0x08002fc0   Section        0  ft5206.o(i.ft5206_scan)
     i.ft5206_wr_reg                          0x08003108   Section        0  ft5206.o(i.ft5206_wr_reg)
     i.gt9xxx_init                            0x08003150   Section        0  gt9xxx.o(i.gt9xxx_init)
-    i.gt9xxx_rd_reg                          0x0800324c   Section        0  gt9xxx.o(i.gt9xxx_rd_reg)
-    i.gt9xxx_scan                            0x080032ac   Section        0  gt9xxx.o(i.gt9xxx_scan)
-    i.gt9xxx_wr_reg                          0x08003490   Section        0  gt9xxx.o(i.gt9xxx_wr_reg)
-    i.key_scan                               0x080034e4   Section        0  main.o(i.key_scan)
-    i.lcd_clear                              0x08003580   Section        0  lcd.o(i.lcd_clear)
-    i.lcd_display_dir                        0x080035b0   Section        0  lcd.o(i.lcd_display_dir)
-    i.lcd_draw_bline                         0x0800369c   Section        0  main.o(i.lcd_draw_bline)
-    i.lcd_draw_circle                        0x08003752   Section        0  lcd.o(i.lcd_draw_circle)
-    i.lcd_draw_hline                         0x08003818   Section        0  lcd.o(i.lcd_draw_hline)
-    i.lcd_draw_line                          0x08003840   Section        0  lcd.o(i.lcd_draw_line)
-    i.lcd_draw_point                         0x080038dc   Section        0  lcd.o(i.lcd_draw_point)
-    i.lcd_ex_ili9341_reginit                 0x080038f4   Section        0  lcd.o(i.lcd_ex_ili9341_reginit)
-    i.lcd_ex_ili9806_reginit                 0x08003b22   Section        0  lcd.o(i.lcd_ex_ili9806_reginit)
-    i.lcd_ex_nt35310_reginit                 0x08003e64   Section        0  lcd.o(i.lcd_ex_nt35310_reginit)
-    i.lcd_ex_nt35510_reginit                 0x08004d58   Section        0  lcd.o(i.lcd_ex_nt35510_reginit)
-    i.lcd_ex_ssd1963_reginit                 0x08005c52   Section        0  lcd.o(i.lcd_ex_ssd1963_reginit)
-    i.lcd_ex_st7789_reginit                  0x08005dc2   Section        0  lcd.o(i.lcd_ex_st7789_reginit)
-    i.lcd_ex_st7796_reginit                  0x08005f6c   Section        0  lcd.o(i.lcd_ex_st7796_reginit)
-    i.lcd_fill                               0x08006134   Section        0  lcd.o(i.lcd_fill)
-    i.lcd_fill_circle                        0x0800617c   Section        0  lcd.o(i.lcd_fill_circle)
-    i.lcd_init                               0x08006234   Section        0  lcd.o(i.lcd_init)
-    i.lcd_rd_data                            0x080064e0   Section        0  lcd.o(i.lcd_rd_data)
-    lcd_rd_data                              0x080064e1   Thumb Code    22  lcd.o(i.lcd_rd_data)
-    i.lcd_scan_dir                           0x080064fc   Section        0  lcd.o(i.lcd_scan_dir)
-    i.lcd_set_cursor                         0x08006680   Section        0  lcd.o(i.lcd_set_cursor)
-    i.lcd_show_char                          0x08006774   Section        0  lcd.o(i.lcd_show_char)
-    i.lcd_show_string                        0x08006850   Section        0  lcd.o(i.lcd_show_string)
-    i.lcd_ssd_backlight_set                  0x080068a8   Section        0  lcd.o(i.lcd_ssd_backlight_set)
-    i.lcd_wr_data                            0x080068f8   Section        0  lcd.o(i.lcd_wr_data)
-    i.lcd_wr_regno                           0x08006910   Section        0  lcd.o(i.lcd_wr_regno)
-    i.lcd_write_ram_prepare                  0x08006928   Section        0  lcd.o(i.lcd_write_ram_prepare)
-    i.lcd_write_reg                          0x0800693c   Section        0  lcd.o(i.lcd_write_reg)
-    i.load_draw_dialog                       0x0800694c   Section        0  main.o(i.load_draw_dialog)
-    i.main                                   0x0800697c   Section        0  main.o(i.main)
-    i.rtp_test                               0x08006ab4   Section        0  main.o(i.rtp_test)
-    i.tp_adjust                              0x08006b48   Section        0  touch.o(i.tp_adjust)
-    i.tp_adjust_info_show                    0x08006ea4   Section        0  touch.o(i.tp_adjust_info_show)
-    tp_adjust_info_show                      0x08006ea5   Thumb Code   254  touch.o(i.tp_adjust_info_show)
-    i.tp_draw_big_point                      0x08006fd0   Section        0  touch.o(i.tp_draw_big_point)
-    i.tp_draw_touch_point                    0x08007004   Section        0  touch.o(i.tp_draw_touch_point)
-    tp_draw_touch_point                      0x08007005   Thumb Code   126  touch.o(i.tp_draw_touch_point)
-    i.tp_get_adjust_data                     0x08007084   Section        0  touch.o(i.tp_get_adjust_data)
-    i.tp_init                                0x08007098   Section        0  touch.o(i.tp_init)
-    i.tp_read_ad                             0x0800736c   Section        0  touch.o(i.tp_read_ad)
-    tp_read_ad                               0x0800736d   Thumb Code   242  touch.o(i.tp_read_ad)
-    i.tp_read_xoy                            0x0800746c   Section        0  touch.o(i.tp_read_xoy)
-    tp_read_xoy                              0x0800746d   Thumb Code   100  touch.o(i.tp_read_xoy)
-    i.tp_read_xy                             0x080074d0   Section        0  touch.o(i.tp_read_xy)
-    tp_read_xy                               0x080074d1   Thumb Code    48  touch.o(i.tp_read_xy)
-    i.tp_read_xy2                            0x08007504   Section        0  touch.o(i.tp_read_xy2)
-    tp_read_xy2                              0x08007505   Thumb Code   114  touch.o(i.tp_read_xy2)
-    i.tp_save_adjust_data                    0x08007578   Section        0  touch.o(i.tp_save_adjust_data)
-    i.tp_scan                                0x08007588   Section        0  touch.o(i.tp_scan)
-    tp_scan                                  0x08007589   Thumb Code   198  touch.o(i.tp_scan)
-    .constdata                               0x0800765c   Section       16  system_stm32f4xx.o(.constdata)
-    .constdata                               0x0800766c   Section        8  system_stm32f4xx.o(.constdata)
-    .constdata                               0x08007674   Section       20  main.o(.constdata)
-    .constdata                               0x08007688   Section    12160  lcd.o(.constdata)
-    .constdata                               0x0800a608   Section       10  ft5206.o(.constdata)
-    .constdata                               0x0800a612   Section       20  gt9xxx.o(.constdata)
-    .constdata                               0x0800a628   Section        4  touch.o(.constdata)
-    .conststring                             0x0800a62c   Section      121  touch.o(.conststring)
+    i.gt9xxx_rd_reg                          0x08003274   Section        0  gt9xxx.o(i.gt9xxx_rd_reg)
+    i.gt9xxx_scan                            0x080032d4   Section        0  gt9xxx.o(i.gt9xxx_scan)
+    i.gt9xxx_wr_reg                          0x080034b8   Section        0  gt9xxx.o(i.gt9xxx_wr_reg)
+    i.key_scan                               0x0800350c   Section        0  main.o(i.key_scan)
+    i.lcd_clear                              0x080035a8   Section        0  lcd.o(i.lcd_clear)
+    i.lcd_display_dir                        0x080035d8   Section        0  lcd.o(i.lcd_display_dir)
+    i.lcd_draw_bline                         0x080036c4   Section        0  main.o(i.lcd_draw_bline)
+    i.lcd_draw_circle                        0x0800377a   Section        0  lcd.o(i.lcd_draw_circle)
+    i.lcd_draw_hline                         0x08003840   Section        0  lcd.o(i.lcd_draw_hline)
+    i.lcd_draw_line                          0x08003868   Section        0  lcd.o(i.lcd_draw_line)
+    i.lcd_draw_point                         0x08003904   Section        0  lcd.o(i.lcd_draw_point)
+    i.lcd_ex_ili9341_reginit                 0x0800391c   Section        0  lcd.o(i.lcd_ex_ili9341_reginit)
+    i.lcd_ex_ili9806_reginit                 0x08003b4a   Section        0  lcd.o(i.lcd_ex_ili9806_reginit)
+    i.lcd_ex_nt35310_reginit                 0x08003e8c   Section        0  lcd.o(i.lcd_ex_nt35310_reginit)
+    i.lcd_ex_nt35510_reginit                 0x08004d80   Section        0  lcd.o(i.lcd_ex_nt35510_reginit)
+    i.lcd_ex_ssd1963_reginit                 0x08005c7a   Section        0  lcd.o(i.lcd_ex_ssd1963_reginit)
+    i.lcd_ex_st7789_reginit                  0x08005dea   Section        0  lcd.o(i.lcd_ex_st7789_reginit)
+    i.lcd_ex_st7796_reginit                  0x08005f94   Section        0  lcd.o(i.lcd_ex_st7796_reginit)
+    i.lcd_fill                               0x0800615c   Section        0  lcd.o(i.lcd_fill)
+    i.lcd_fill_circle                        0x080061a4   Section        0  lcd.o(i.lcd_fill_circle)
+    i.lcd_init                               0x0800625c   Section        0  lcd.o(i.lcd_init)
+    i.lcd_rd_data                            0x08006508   Section        0  lcd.o(i.lcd_rd_data)
+    lcd_rd_data                              0x08006509   Thumb Code    22  lcd.o(i.lcd_rd_data)
+    i.lcd_scan_dir                           0x08006524   Section        0  lcd.o(i.lcd_scan_dir)
+    i.lcd_set_cursor                         0x080066a8   Section        0  lcd.o(i.lcd_set_cursor)
+    i.lcd_show_char                          0x0800679c   Section        0  lcd.o(i.lcd_show_char)
+    i.lcd_show_string                        0x08006878   Section        0  lcd.o(i.lcd_show_string)
+    i.lcd_ssd_backlight_set                  0x080068d0   Section        0  lcd.o(i.lcd_ssd_backlight_set)
+    i.lcd_wr_data                            0x08006920   Section        0  lcd.o(i.lcd_wr_data)
+    i.lcd_wr_regno                           0x08006938   Section        0  lcd.o(i.lcd_wr_regno)
+    i.lcd_write_ram_prepare                  0x08006950   Section        0  lcd.o(i.lcd_write_ram_prepare)
+    i.lcd_write_reg                          0x08006964   Section        0  lcd.o(i.lcd_write_reg)
+    i.load_draw_dialog                       0x08006974   Section        0  main.o(i.load_draw_dialog)
+    i.main                                   0x080069a4   Section        0  main.o(i.main)
+    i.rtp_test                               0x08006adc   Section        0  main.o(i.rtp_test)
+    i.tp_adjust                              0x08006b70   Section        0  touch.o(i.tp_adjust)
+    i.tp_adjust_info_show                    0x08006ecc   Section        0  touch.o(i.tp_adjust_info_show)
+    tp_adjust_info_show                      0x08006ecd   Thumb Code   254  touch.o(i.tp_adjust_info_show)
+    i.tp_draw_big_point                      0x08006ff8   Section        0  touch.o(i.tp_draw_big_point)
+    i.tp_draw_touch_point                    0x0800702c   Section        0  touch.o(i.tp_draw_touch_point)
+    tp_draw_touch_point                      0x0800702d   Thumb Code   126  touch.o(i.tp_draw_touch_point)
+    i.tp_get_adjust_data                     0x080070ac   Section        0  touch.o(i.tp_get_adjust_data)
+    i.tp_init                                0x080070c0   Section        0  touch.o(i.tp_init)
+    i.tp_read_ad                             0x08007394   Section        0  touch.o(i.tp_read_ad)
+    tp_read_ad                               0x08007395   Thumb Code   242  touch.o(i.tp_read_ad)
+    i.tp_read_xoy                            0x08007494   Section        0  touch.o(i.tp_read_xoy)
+    tp_read_xoy                              0x08007495   Thumb Code   100  touch.o(i.tp_read_xoy)
+    i.tp_read_xy                             0x080074f8   Section        0  touch.o(i.tp_read_xy)
+    tp_read_xy                               0x080074f9   Thumb Code    48  touch.o(i.tp_read_xy)
+    i.tp_read_xy2                            0x0800752c   Section        0  touch.o(i.tp_read_xy2)
+    tp_read_xy2                              0x0800752d   Thumb Code   114  touch.o(i.tp_read_xy2)
+    i.tp_save_adjust_data                    0x080075a0   Section        0  touch.o(i.tp_save_adjust_data)
+    i.tp_scan                                0x080075b0   Section        0  touch.o(i.tp_scan)
+    tp_scan                                  0x080075b1   Thumb Code   198  touch.o(i.tp_scan)
+    .constdata                               0x08007684   Section       16  system_stm32f4xx.o(.constdata)
+    .constdata                               0x08007694   Section        8  system_stm32f4xx.o(.constdata)
+    .constdata                               0x0800769c   Section       20  main.o(.constdata)
+    .constdata                               0x080076b0   Section    12160  lcd.o(.constdata)
+    .constdata                               0x0800a630   Section       10  ft5206.o(.constdata)
+    .constdata                               0x0800a63a   Section       20  gt9xxx.o(.constdata)
+    .constdata                               0x0800a650   Section        4  touch.o(.constdata)
+    .conststring                             0x0800a654   Section      121  touch.o(.conststring)
     .data                                    0x20000000   Section       12  stm32f4xx_hal.o(.data)
     .data                                    0x2000000c   Section        4  system_stm32f4xx.o(.data)
     .data                                    0x20000010   Section        1  main.o(.data)
@@ -1850,57 +1846,57 @@ Image Symbol Table
     ft5206_rd_reg                            0x08002f69   Thumb Code    86  ft5206.o(i.ft5206_rd_reg)
     ft5206_scan                              0x08002fc1   Thumb Code   310  ft5206.o(i.ft5206_scan)
     ft5206_wr_reg                            0x08003109   Thumb Code    72  ft5206.o(i.ft5206_wr_reg)
-    gt9xxx_init                              0x08003151   Thumb Code   200  gt9xxx.o(i.gt9xxx_init)
-    gt9xxx_rd_reg                            0x0800324d   Thumb Code    96  gt9xxx.o(i.gt9xxx_rd_reg)
-    gt9xxx_scan                              0x080032ad   Thumb Code   468  gt9xxx.o(i.gt9xxx_scan)
-    gt9xxx_wr_reg                            0x08003491   Thumb Code    82  gt9xxx.o(i.gt9xxx_wr_reg)
-    key_scan                                 0x080034e5   Thumb Code   146  main.o(i.key_scan)
-    lcd_clear                                0x08003581   Thumb Code    40  lcd.o(i.lcd_clear)
-    lcd_display_dir                          0x080035b1   Thumb Code   230  lcd.o(i.lcd_display_dir)
-    lcd_draw_bline                           0x0800369d   Thumb Code   182  main.o(i.lcd_draw_bline)
-    lcd_draw_circle                          0x08003753   Thumb Code   196  lcd.o(i.lcd_draw_circle)
-    lcd_draw_hline                           0x08003819   Thumb Code    36  lcd.o(i.lcd_draw_hline)
-    lcd_draw_line                            0x08003841   Thumb Code   156  lcd.o(i.lcd_draw_line)
-    lcd_draw_point                           0x080038dd   Thumb Code    18  lcd.o(i.lcd_draw_point)
-    lcd_ex_ili9341_reginit                   0x080038f5   Thumb Code   558  lcd.o(i.lcd_ex_ili9341_reginit)
-    lcd_ex_ili9806_reginit                   0x08003b23   Thumb Code   834  lcd.o(i.lcd_ex_ili9806_reginit)
-    lcd_ex_nt35310_reginit                   0x08003e65   Thumb Code  3828  lcd.o(i.lcd_ex_nt35310_reginit)
-    lcd_ex_nt35510_reginit                   0x08004d59   Thumb Code  3834  lcd.o(i.lcd_ex_nt35510_reginit)
-    lcd_ex_ssd1963_reginit                   0x08005c53   Thumb Code   368  lcd.o(i.lcd_ex_ssd1963_reginit)
-    lcd_ex_st7789_reginit                    0x08005dc3   Thumb Code   426  lcd.o(i.lcd_ex_st7789_reginit)
-    lcd_ex_st7796_reginit                    0x08005f6d   Thumb Code   456  lcd.o(i.lcd_ex_st7796_reginit)
-    lcd_fill                                 0x08006135   Thumb Code    68  lcd.o(i.lcd_fill)
-    lcd_fill_circle                          0x0800617d   Thumb Code   182  lcd.o(i.lcd_fill_circle)
-    lcd_init                                 0x08006235   Thumb Code   662  lcd.o(i.lcd_init)
-    lcd_scan_dir                             0x080064fd   Thumb Code   384  lcd.o(i.lcd_scan_dir)
-    lcd_set_cursor                           0x08006681   Thumb Code   238  lcd.o(i.lcd_set_cursor)
-    lcd_show_char                            0x08006775   Thumb Code   196  lcd.o(i.lcd_show_char)
-    lcd_show_string                          0x08006851   Thumb Code    86  lcd.o(i.lcd_show_string)
-    lcd_ssd_backlight_set                    0x080068a9   Thumb Code    72  lcd.o(i.lcd_ssd_backlight_set)
-    lcd_wr_data                              0x080068f9   Thumb Code    20  lcd.o(i.lcd_wr_data)
-    lcd_wr_regno                             0x08006911   Thumb Code    20  lcd.o(i.lcd_wr_regno)
-    lcd_write_ram_prepare                    0x08006929   Thumb Code    10  lcd.o(i.lcd_write_ram_prepare)
-    lcd_write_reg                            0x0800693d   Thumb Code    10  lcd.o(i.lcd_write_reg)
-    load_draw_dialog                         0x0800694d   Thumb Code    40  main.o(i.load_draw_dialog)
-    main                                     0x0800697d   Thumb Code   182  main.o(i.main)
-    rtp_test                                 0x08006ab5   Thumb Code   134  main.o(i.rtp_test)
-    tp_adjust                                0x08006b49   Thumb Code   800  touch.o(i.tp_adjust)
-    tp_draw_big_point                        0x08006fd1   Thumb Code    52  touch.o(i.tp_draw_big_point)
-    tp_get_adjust_data                       0x08007085   Thumb Code    16  touch.o(i.tp_get_adjust_data)
-    tp_init                                  0x08007099   Thumb Code   432  touch.o(i.tp_init)
-    tp_save_adjust_data                      0x08007579   Thumb Code    10  touch.o(i.tp_save_adjust_data)
-    AHBPrescTable                            0x0800765c   Data          16  system_stm32f4xx.o(.constdata)
-    APBPrescTable                            0x0800766c   Data           8  system_stm32f4xx.o(.constdata)
-    POINT_COLOR_TBL                          0x08007674   Data          20  main.o(.constdata)
-    asc2_1206                                0x08007688   Data        1140  lcd.o(.constdata)
-    asc2_1608                                0x08007afc   Data        1520  lcd.o(.constdata)
-    asc2_2412                                0x080080ec   Data        3420  lcd.o(.constdata)
-    asc2_3216                                0x08008e48   Data        6080  lcd.o(.constdata)
-    FT5206_TPX_TBL                           0x0800a608   Data          10  ft5206.o(.constdata)
-    GT9XXX_TPX_TBL                           0x0800a612   Data          20  gt9xxx.o(.constdata)
-    TP_REMIND_MSG_TBL                        0x0800a628   Data           4  touch.o(.constdata)
-    Region$$Table$$Base                      0x0800a6a8   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800a6c8   Number         0  anon$$obj.o(Region$$Table)
+    gt9xxx_init                              0x08003151   Thumb Code   222  gt9xxx.o(i.gt9xxx_init)
+    gt9xxx_rd_reg                            0x08003275   Thumb Code    96  gt9xxx.o(i.gt9xxx_rd_reg)
+    gt9xxx_scan                              0x080032d5   Thumb Code   468  gt9xxx.o(i.gt9xxx_scan)
+    gt9xxx_wr_reg                            0x080034b9   Thumb Code    82  gt9xxx.o(i.gt9xxx_wr_reg)
+    key_scan                                 0x0800350d   Thumb Code   146  main.o(i.key_scan)
+    lcd_clear                                0x080035a9   Thumb Code    40  lcd.o(i.lcd_clear)
+    lcd_display_dir                          0x080035d9   Thumb Code   230  lcd.o(i.lcd_display_dir)
+    lcd_draw_bline                           0x080036c5   Thumb Code   182  main.o(i.lcd_draw_bline)
+    lcd_draw_circle                          0x0800377b   Thumb Code   196  lcd.o(i.lcd_draw_circle)
+    lcd_draw_hline                           0x08003841   Thumb Code    36  lcd.o(i.lcd_draw_hline)
+    lcd_draw_line                            0x08003869   Thumb Code   156  lcd.o(i.lcd_draw_line)
+    lcd_draw_point                           0x08003905   Thumb Code    18  lcd.o(i.lcd_draw_point)
+    lcd_ex_ili9341_reginit                   0x0800391d   Thumb Code   558  lcd.o(i.lcd_ex_ili9341_reginit)
+    lcd_ex_ili9806_reginit                   0x08003b4b   Thumb Code   834  lcd.o(i.lcd_ex_ili9806_reginit)
+    lcd_ex_nt35310_reginit                   0x08003e8d   Thumb Code  3828  lcd.o(i.lcd_ex_nt35310_reginit)
+    lcd_ex_nt35510_reginit                   0x08004d81   Thumb Code  3834  lcd.o(i.lcd_ex_nt35510_reginit)
+    lcd_ex_ssd1963_reginit                   0x08005c7b   Thumb Code   368  lcd.o(i.lcd_ex_ssd1963_reginit)
+    lcd_ex_st7789_reginit                    0x08005deb   Thumb Code   426  lcd.o(i.lcd_ex_st7789_reginit)
+    lcd_ex_st7796_reginit                    0x08005f95   Thumb Code   456  lcd.o(i.lcd_ex_st7796_reginit)
+    lcd_fill                                 0x0800615d   Thumb Code    68  lcd.o(i.lcd_fill)
+    lcd_fill_circle                          0x080061a5   Thumb Code   182  lcd.o(i.lcd_fill_circle)
+    lcd_init                                 0x0800625d   Thumb Code   662  lcd.o(i.lcd_init)
+    lcd_scan_dir                             0x08006525   Thumb Code   384  lcd.o(i.lcd_scan_dir)
+    lcd_set_cursor                           0x080066a9   Thumb Code   238  lcd.o(i.lcd_set_cursor)
+    lcd_show_char                            0x0800679d   Thumb Code   196  lcd.o(i.lcd_show_char)
+    lcd_show_string                          0x08006879   Thumb Code    86  lcd.o(i.lcd_show_string)
+    lcd_ssd_backlight_set                    0x080068d1   Thumb Code    72  lcd.o(i.lcd_ssd_backlight_set)
+    lcd_wr_data                              0x08006921   Thumb Code    20  lcd.o(i.lcd_wr_data)
+    lcd_wr_regno                             0x08006939   Thumb Code    20  lcd.o(i.lcd_wr_regno)
+    lcd_write_ram_prepare                    0x08006951   Thumb Code    10  lcd.o(i.lcd_write_ram_prepare)
+    lcd_write_reg                            0x08006965   Thumb Code    10  lcd.o(i.lcd_write_reg)
+    load_draw_dialog                         0x08006975   Thumb Code    40  main.o(i.load_draw_dialog)
+    main                                     0x080069a5   Thumb Code   182  main.o(i.main)
+    rtp_test                                 0x08006add   Thumb Code   134  main.o(i.rtp_test)
+    tp_adjust                                0x08006b71   Thumb Code   800  touch.o(i.tp_adjust)
+    tp_draw_big_point                        0x08006ff9   Thumb Code    52  touch.o(i.tp_draw_big_point)
+    tp_get_adjust_data                       0x080070ad   Thumb Code    16  touch.o(i.tp_get_adjust_data)
+    tp_init                                  0x080070c1   Thumb Code   432  touch.o(i.tp_init)
+    tp_save_adjust_data                      0x080075a1   Thumb Code    10  touch.o(i.tp_save_adjust_data)
+    AHBPrescTable                            0x08007684   Data          16  system_stm32f4xx.o(.constdata)
+    APBPrescTable                            0x08007694   Data           8  system_stm32f4xx.o(.constdata)
+    POINT_COLOR_TBL                          0x0800769c   Data          20  main.o(.constdata)
+    asc2_1206                                0x080076b0   Data        1140  lcd.o(.constdata)
+    asc2_1608                                0x08007b24   Data        1520  lcd.o(.constdata)
+    asc2_2412                                0x08008114   Data        3420  lcd.o(.constdata)
+    asc2_3216                                0x08008e70   Data        6080  lcd.o(.constdata)
+    FT5206_TPX_TBL                           0x0800a630   Data          10  ft5206.o(.constdata)
+    GT9XXX_TPX_TBL                           0x0800a63a   Data          20  gt9xxx.o(.constdata)
+    TP_REMIND_MSG_TBL                        0x0800a650   Data           4  touch.o(.constdata)
+    Region$$Table$$Base                      0x0800a6d0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800a6f0   Number         0  anon$$obj.o(Region$$Table)
     uwTickFreq                               0x20000000   Data           1  stm32f4xx_hal.o(.data)
     uwTickPrio                               0x20000004   Data           4  stm32f4xx_hal.o(.data)
     uwTick                                   0x20000008   Data           4  stm32f4xx_hal.o(.data)
@@ -1923,53 +1919,53 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000a73c, Max: 0x00100000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000a764, Max: 0x00100000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000a6c8, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000a6f0, Max: 0x00100000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x00000188   Data   RO            3    RESET               startup_stm32f407xx.o
-    0x08000188   0x00000000   Code   RO         3152  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000188   0x00000004   Code   RO         3436    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0800018c   0x00000004   Code   RO         3439    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000190   0x00000000   Code   RO         3441    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000190   0x00000000   Code   RO         3443    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000190   0x00000008   Code   RO         3444    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000198   0x00000000   Code   RO         3446    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000198   0x00000000   Code   RO         3448    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000198   0x00000004   Code   RO         3437    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000188   0x00000000   Code   RO         3146  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000188   0x00000004   Code   RO         3430    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0800018c   0x00000004   Code   RO         3433    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000190   0x00000000   Code   RO         3435    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000190   0x00000000   Code   RO         3437    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000190   0x00000008   Code   RO         3438    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000198   0x00000000   Code   RO         3440    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000198   0x00000000   Code   RO         3442    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000198   0x00000004   Code   RO         3431    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x0800019c   0x00000024   Code   RO            4    .text               startup_stm32f407xx.o
-    0x080001c0   0x00000062   Code   RO         3155    .text               mc_w.l(uldiv.o)
-    0x08000222   0x0000001c   Code   RO         3157    .text               mc_w.l(strcmp.o)
-    0x0800023e   0x000000e4   Code   RO         3420    .text               mf_w.l(dmul.o)
-    0x08000322   0x000000de   Code   RO         3422    .text               mf_w.l(ddiv.o)
-    0x08000400   0x00000022   Code   RO         3426    .text               mf_w.l(dflti.o)
-    0x08000422   0x0000001a   Code   RO         3428    .text               mf_w.l(dfltui.o)
-    0x0800043c   0x00000032   Code   RO         3430    .text               mf_w.l(dfixui.o)
+    0x080001c0   0x00000062   Code   RO         3149    .text               mc_w.l(uldiv.o)
+    0x08000222   0x0000001c   Code   RO         3151    .text               mc_w.l(strcmp.o)
+    0x0800023e   0x000000e4   Code   RO         3414    .text               mf_w.l(dmul.o)
+    0x08000322   0x000000de   Code   RO         3416    .text               mf_w.l(ddiv.o)
+    0x08000400   0x00000022   Code   RO         3420    .text               mf_w.l(dflti.o)
+    0x08000422   0x0000001a   Code   RO         3422    .text               mf_w.l(dfltui.o)
+    0x0800043c   0x00000032   Code   RO         3424    .text               mf_w.l(dfixui.o)
     0x0800046e   0x00000002   PAD
-    0x08000470   0x00000030   Code   RO         3432    .text               mf_w.l(cdcmple.o)
-    0x080004a0   0x00000030   Code   RO         3434    .text               mf_w.l(cdrcmple.o)
-    0x080004d0   0x0000002c   Code   RO         3451    .text               mc_w.l(uidiv.o)
-    0x080004fc   0x0000001e   Code   RO         3453    .text               mc_w.l(llshl.o)
-    0x0800051a   0x00000020   Code   RO         3455    .text               mc_w.l(llushr.o)
-    0x0800053a   0x00000000   Code   RO         3457    .text               mc_w.l(iusefp.o)
-    0x0800053a   0x000000ba   Code   RO         3458    .text               mf_w.l(depilogue.o)
-    0x080005f4   0x0000014e   Code   RO         3460    .text               mf_w.l(dadd.o)
-    0x08000742   0x00000030   Code   RO         3462    .text               mf_w.l(dfixul.o)
+    0x08000470   0x00000030   Code   RO         3426    .text               mf_w.l(cdcmple.o)
+    0x080004a0   0x00000030   Code   RO         3428    .text               mf_w.l(cdrcmple.o)
+    0x080004d0   0x0000002c   Code   RO         3445    .text               mc_w.l(uidiv.o)
+    0x080004fc   0x0000001e   Code   RO         3447    .text               mc_w.l(llshl.o)
+    0x0800051a   0x00000020   Code   RO         3449    .text               mc_w.l(llushr.o)
+    0x0800053a   0x00000000   Code   RO         3451    .text               mc_w.l(iusefp.o)
+    0x0800053a   0x000000ba   Code   RO         3452    .text               mf_w.l(depilogue.o)
+    0x080005f4   0x0000014e   Code   RO         3454    .text               mf_w.l(dadd.o)
+    0x08000742   0x00000030   Code   RO         3456    .text               mf_w.l(dfixul.o)
     0x08000772   0x00000002   PAD
-    0x08000774   0x00000024   Code   RO         3464    .text               mc_w.l(init.o)
-    0x08000798   0x00000024   Code   RO         3466    .text               mc_w.l(llsshr.o)
-    0x080007bc   0x00000002   Code   RO         2481    i.BusFault_Handler  stm32f4xx_it.o
-    0x080007be   0x00000002   Code   RO         2482    i.DebugMon_Handler  stm32f4xx_it.o
-    0x080007c0   0x00000028   Code   RO         3057    i.Eeprom_Read       i2c.o
-    0x080007e8   0x00000040   Code   RO         3058    i.Eeprom_Write      i2c.o
+    0x08000774   0x00000024   Code   RO         3458    .text               mc_w.l(init.o)
+    0x08000798   0x00000024   Code   RO         3460    .text               mc_w.l(llsshr.o)
+    0x080007bc   0x00000002   Code   RO         2475    i.BusFault_Handler  stm32f4xx_it.o
+    0x080007be   0x00000002   Code   RO         2476    i.DebugMon_Handler  stm32f4xx_it.o
+    0x080007c0   0x00000028   Code   RO         3051    i.Eeprom_Read       i2c.o
+    0x080007e8   0x00000040   Code   RO         3052    i.Eeprom_Write      i2c.o
     0x08000828   0x00000040   Code   RO         1404    i.FSMC_NORSRAM_Extended_Timing_Init  stm32f4xx_ll_fsmc.o
     0x08000868   0x00000054   Code   RO         1405    i.FSMC_NORSRAM_Init  stm32f4xx_ll_fsmc.o
     0x080008bc   0x00000044   Code   RO         1406    i.FSMC_NORSRAM_Timing_Init  stm32f4xx_ll_fsmc.o
-    0x08000900   0x00000006   Code   RO         3111    i.HAL_Delay         delay.o
+    0x08000900   0x00000006   Code   RO         3105    i.HAL_Delay         delay.o
     0x08000906   0x00000002   PAD
-    0x08000908   0x00000098   Code   RO         2337    i.HAL_FSMC_MspInit  fsmc.o
+    0x08000908   0x00000098   Code   RO         2331    i.HAL_FSMC_MspInit  fsmc.o
     0x080009a0   0x000001b0   Code   RO          377    i.HAL_GPIO_Init     stm32f4xx_hal_gpio.o
     0x08000b50   0x0000000a   Code   RO          379    i.HAL_GPIO_ReadPin  stm32f4xx_hal_gpio.o
     0x08000b5a   0x00000008   Code   RO          380    i.HAL_GPIO_TogglePin  stm32f4xx_hal_gpio.o
@@ -1978,11 +1974,11 @@ Memory Map of the image
     0x08000b78   0x00000108   Code   RO         1777    i.HAL_I2C_Init      stm32f4xx_hal_i2c.o
     0x08000c80   0x000001fc   Code   RO         1793    i.HAL_I2C_Mem_Read  stm32f4xx_hal_i2c.o
     0x08000e7c   0x0000013c   Code   RO         1796    i.HAL_I2C_Mem_Write  stm32f4xx_hal_i2c.o
-    0x08000fb8   0x0000004c   Code   RO         3060    i.HAL_I2C_MspInit   i2c.o
+    0x08000fb8   0x0000004c   Code   RO         3054    i.HAL_I2C_MspInit   i2c.o
     0x08001004   0x00000010   Code   RO          713    i.HAL_IncTick       stm32f4xx_hal.o
     0x08001014   0x00000034   Code   RO          714    i.HAL_Init          stm32f4xx_hal.o
     0x08001048   0x00000040   Code   RO          715    i.HAL_InitTick      stm32f4xx_hal.o
-    0x08001088   0x00000058   Code   RO         2409    i.HAL_MspInit       stm32f4xx_hal_msp.o
+    0x08001088   0x00000058   Code   RO         2403    i.HAL_MspInit       stm32f4xx_hal_msp.o
     0x080010e0   0x00000040   Code   RO          250    i.HAL_NVIC_SetPriority  stm32f4xx_hal_cortex.o
     0x08001120   0x00000024   Code   RO          251    i.HAL_NVIC_SetPriorityGrouping  stm32f4xx_hal_cortex.o
     0x08001144   0x00000130   Code   RO          909    i.HAL_RCC_ClockConfig  stm32f4xx_hal_rcc.o
@@ -1992,15 +1988,15 @@ Memory Map of the image
     0x080012c0   0x00000060   Code   RO          918    i.HAL_RCC_GetSysClockFreq  stm32f4xx_hal_rcc.o
     0x08001320   0x0000031c   Code   RO          921    i.HAL_RCC_OscConfig  stm32f4xx_hal_rcc.o
     0x0800163c   0x00000056   Code   RO          580    i.HAL_SRAM_Init     stm32f4xx_hal_sram.o
-    0x08001692   0x00000004   Code   RO         2339    i.HAL_SRAM_MspInit  fsmc.o
+    0x08001692   0x00000004   Code   RO         2333    i.HAL_SRAM_MspInit  fsmc.o
     0x08001696   0x00000018   Code   RO          253    i.HAL_SYSTICK_CLKSourceConfig  stm32f4xx_hal_cortex.o
     0x080016ae   0x00000002   Code   RO          254    i.HAL_SYSTICK_Callback  stm32f4xx_hal_cortex.o
     0x080016b0   0x00000028   Code   RO          255    i.HAL_SYSTICK_Config  stm32f4xx_hal_cortex.o
     0x080016d8   0x00000008   Code   RO          256    i.HAL_SYSTICK_IRQHandler  stm32f4xx_hal_cortex.o
     0x080016e0   0x00000062   Code   RO         1035    i.HAL_UART_Init     stm32f4xx_hal_uart.o
     0x08001742   0x00000002   PAD
-    0x08001744   0x0000004c   Code   RO         2434    i.HAL_UART_MspInit  usart.o
-    0x08001790   0x00000002   Code   RO         2483    i.HardFault_Handler  stm32f4xx_it.o
+    0x08001744   0x0000004c   Code   RO         2428    i.HAL_UART_MspInit  usart.o
+    0x08001790   0x00000002   Code   RO         2477    i.HardFault_Handler  stm32f4xx_it.o
     0x08001792   0x00000028   Code   RO         1815    i.I2C_IsAcknowledgeFailed  stm32f4xx_hal_i2c.o
     0x080017ba   0x000000f0   Code   RO         1824    i.I2C_RequestMemoryRead  stm32f4xx_hal_i2c.o
     0x080018aa   0x00000002   PAD
@@ -2011,116 +2007,116 @@ Memory Map of the image
     0x080019fc   0x00000088   Code   RO         1830    i.I2C_WaitOnMasterAddressFlagUntilTimeout  stm32f4xx_hal_i2c.o
     0x08001a84   0x00000062   Code   RO         1831    i.I2C_WaitOnRXNEFlagUntilTimeout  stm32f4xx_hal_i2c.o
     0x08001ae6   0x0000004e   Code   RO         1832    i.I2C_WaitOnTXEFlagUntilTimeout  stm32f4xx_hal_i2c.o
-    0x08001b34   0x00000090   Code   RO         2340    i.MX_FSMC_Init      fsmc.o
-    0x08001bc4   0x00000138   Code   RO         2385    i.MX_GPIO_Init      gpio.o
-    0x08001cfc   0x00000054   Code   RO         3061    i.MX_I2C2_Init      i2c.o
-    0x08001d50   0x0000004c   Code   RO         2435    i.MX_USART1_UART_Init  usart.o
-    0x08001d9c   0x00000002   Code   RO         2484    i.MemManage_Handler  stm32f4xx_it.o
-    0x08001d9e   0x00000002   Code   RO         2485    i.NMI_Handler       stm32f4xx_it.o
+    0x08001b34   0x00000090   Code   RO         2334    i.MX_FSMC_Init      fsmc.o
+    0x08001bc4   0x00000138   Code   RO         2379    i.MX_GPIO_Init      gpio.o
+    0x08001cfc   0x00000054   Code   RO         3055    i.MX_I2C2_Init      i2c.o
+    0x08001d50   0x0000004c   Code   RO         2429    i.MX_USART1_UART_Init  usart.o
+    0x08001d9c   0x00000002   Code   RO         2478    i.MemManage_Handler  stm32f4xx_it.o
+    0x08001d9e   0x00000002   Code   RO         2479    i.NMI_Handler       stm32f4xx_it.o
     0x08001da0   0x00000020   Code   RO          257    i.NVIC_SetPriority  stm32f4xx_hal_cortex.o
-    0x08001dc0   0x00000002   Code   RO         2486    i.PendSV_Handler    stm32f4xx_it.o
-    0x08001dc2   0x00000002   Code   RO         2487    i.SVC_Handler       stm32f4xx_it.o
-    0x08001dc4   0x0000000e   Code   RO         2488    i.SysTick_Handler   stm32f4xx_it.o
+    0x08001dc0   0x00000002   Code   RO         2480    i.PendSV_Handler    stm32f4xx_it.o
+    0x08001dc2   0x00000002   Code   RO         2481    i.SVC_Handler       stm32f4xx_it.o
+    0x08001dc4   0x0000000e   Code   RO         2482    i.SysTick_Handler   stm32f4xx_it.o
     0x08001dd2   0x00000002   PAD
     0x08001dd4   0x000000a0   Code   RO         2220    i.SystemClock_Config  main.o
     0x08001e74   0x00000054   Code   RO         2183    i.SystemInit        system_stm32f4xx.o
     0x08001ec8   0x000002ac   Code   RO         1061    i.UART_SetConfig    stm32f4xx_hal_uart.o
-    0x08002174   0x00000002   Code   RO         2489    i.UsageFault_Handler  stm32f4xx_it.o
+    0x08002174   0x00000002   Code   RO         2483    i.UsageFault_Handler  stm32f4xx_it.o
     0x08002176   0x00000002   Code   RO         2221    i._Error_Handler    main.o
-    0x08002178   0x00000020   Code   RO         3392    i.__0printf         mc_w.l(printfa.o)
-    0x08002198   0x00000028   Code   RO         3394    i.__0sprintf        mc_w.l(printfa.o)
-    0x080021c0   0x0000000e   Code   RO         3470    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x080021ce   0x00000002   Code   RO         3471    i.__scatterload_null  mc_w.l(handlers.o)
-    0x080021d0   0x0000000e   Code   RO         3472    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08002178   0x00000020   Code   RO         3386    i.__0printf         mc_w.l(printfa.o)
+    0x08002198   0x00000028   Code   RO         3388    i.__0sprintf        mc_w.l(printfa.o)
+    0x080021c0   0x0000000e   Code   RO         3464    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x080021ce   0x00000002   Code   RO         3465    i.__scatterload_null  mc_w.l(handlers.o)
+    0x080021d0   0x0000000e   Code   RO         3466    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x080021de   0x00000002   PAD
-    0x080021e0   0x00000184   Code   RO         3399    i._fp_digits        mc_w.l(printfa.o)
-    0x08002364   0x000006dc   Code   RO         3400    i._printf_core      mc_w.l(printfa.o)
-    0x08002a40   0x00000024   Code   RO         3401    i._printf_post_padding  mc_w.l(printfa.o)
-    0x08002a64   0x0000002e   Code   RO         3402    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x08002a92   0x0000000a   Code   RO         3404    i._sputc            mc_w.l(printfa.o)
-    0x08002a9c   0x00000050   Code   RO         2796    i.ct_iic_ack        ctiic.o
-    0x08002aec   0x00000004   Code   RO         2797    i.ct_iic_init       ctiic.o
-    0x08002af0   0x0000003c   Code   RO         2798    i.ct_iic_nack       ctiic.o
-    0x08002b2c   0x00000060   Code   RO         2799    i.ct_iic_read_byte  ctiic.o
-    0x08002b8c   0x00000060   Code   RO         2800    i.ct_iic_send_byte  ctiic.o
-    0x08002bec   0x00000048   Code   RO         2801    i.ct_iic_start      ctiic.o
-    0x08002c34   0x00000040   Code   RO         2802    i.ct_iic_stop       ctiic.o
-    0x08002c74   0x00000064   Code   RO         2803    i.ct_iic_wait_ack   ctiic.o
+    0x080021e0   0x00000184   Code   RO         3393    i._fp_digits        mc_w.l(printfa.o)
+    0x08002364   0x000006dc   Code   RO         3394    i._printf_core      mc_w.l(printfa.o)
+    0x08002a40   0x00000024   Code   RO         3395    i._printf_post_padding  mc_w.l(printfa.o)
+    0x08002a64   0x0000002e   Code   RO         3396    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x08002a92   0x0000000a   Code   RO         3398    i._sputc            mc_w.l(printfa.o)
+    0x08002a9c   0x00000050   Code   RO         2790    i.ct_iic_ack        ctiic.o
+    0x08002aec   0x00000004   Code   RO         2791    i.ct_iic_init       ctiic.o
+    0x08002af0   0x0000003c   Code   RO         2792    i.ct_iic_nack       ctiic.o
+    0x08002b2c   0x00000060   Code   RO         2793    i.ct_iic_read_byte  ctiic.o
+    0x08002b8c   0x00000060   Code   RO         2794    i.ct_iic_send_byte  ctiic.o
+    0x08002bec   0x00000048   Code   RO         2795    i.ct_iic_start      ctiic.o
+    0x08002c34   0x00000040   Code   RO         2796    i.ct_iic_stop       ctiic.o
+    0x08002c74   0x00000064   Code   RO         2797    i.ct_iic_wait_ack   ctiic.o
     0x08002cd8   0x000000f8   Code   RO         2222    i.ctp_test          main.o
-    0x08002dd0   0x0000000c   Code   RO         3112    i.delay_init        delay.o
-    0x08002ddc   0x0000000a   Code   RO         3113    i.delay_ms          delay.o
+    0x08002dd0   0x0000000c   Code   RO         3106    i.delay_init        delay.o
+    0x08002ddc   0x0000000a   Code   RO         3107    i.delay_ms          delay.o
     0x08002de6   0x00000002   PAD
-    0x08002de8   0x00000034   Code   RO         3114    i.delay_us          delay.o
-    0x08002e1c   0x00000014   Code   RO         2436    i.fputc             usart.o
-    0x08002e30   0x00000138   Code   RO         2865    i.ft5206_init       ft5206.o
-    0x08002f68   0x00000056   Code   RO         2866    i.ft5206_rd_reg     ft5206.o
+    0x08002de8   0x00000034   Code   RO         3108    i.delay_us          delay.o
+    0x08002e1c   0x00000014   Code   RO         2430    i.fputc             usart.o
+    0x08002e30   0x00000138   Code   RO         2859    i.ft5206_init       ft5206.o
+    0x08002f68   0x00000056   Code   RO         2860    i.ft5206_rd_reg     ft5206.o
     0x08002fbe   0x00000002   PAD
-    0x08002fc0   0x00000148   Code   RO         2867    i.ft5206_scan       ft5206.o
-    0x08003108   0x00000048   Code   RO         2868    i.ft5206_wr_reg     ft5206.o
-    0x08003150   0x000000fc   Code   RO         2921    i.gt9xxx_init       gt9xxx.o
-    0x0800324c   0x00000060   Code   RO         2922    i.gt9xxx_rd_reg     gt9xxx.o
-    0x080032ac   0x000001e4   Code   RO         2923    i.gt9xxx_scan       gt9xxx.o
-    0x08003490   0x00000052   Code   RO         2924    i.gt9xxx_wr_reg     gt9xxx.o
-    0x080034e2   0x00000002   PAD
-    0x080034e4   0x0000009c   Code   RO         2223    i.key_scan          main.o
-    0x08003580   0x00000030   Code   RO         2553    i.lcd_clear         lcd.o
-    0x080035b0   0x000000ec   Code   RO         2555    i.lcd_display_dir   lcd.o
-    0x0800369c   0x000000b6   Code   RO         2224    i.lcd_draw_bline    main.o
-    0x08003752   0x000000c4   Code   RO         2558    i.lcd_draw_circle   lcd.o
-    0x08003816   0x00000002   PAD
-    0x08003818   0x00000028   Code   RO         2559    i.lcd_draw_hline    lcd.o
-    0x08003840   0x0000009c   Code   RO         2560    i.lcd_draw_line     lcd.o
-    0x080038dc   0x00000018   Code   RO         2561    i.lcd_draw_point    lcd.o
-    0x080038f4   0x0000022e   Code   RO         2563    i.lcd_ex_ili9341_reginit  lcd.o
-    0x08003b22   0x00000342   Code   RO         2564    i.lcd_ex_ili9806_reginit  lcd.o
-    0x08003e64   0x00000ef4   Code   RO         2565    i.lcd_ex_nt35310_reginit  lcd.o
-    0x08004d58   0x00000efa   Code   RO         2566    i.lcd_ex_nt35510_reginit  lcd.o
-    0x08005c52   0x00000170   Code   RO         2567    i.lcd_ex_ssd1963_reginit  lcd.o
-    0x08005dc2   0x000001aa   Code   RO         2568    i.lcd_ex_st7789_reginit  lcd.o
-    0x08005f6c   0x000001c8   Code   RO         2569    i.lcd_ex_st7796_reginit  lcd.o
-    0x08006134   0x00000048   Code   RO         2570    i.lcd_fill          lcd.o
-    0x0800617c   0x000000b6   Code   RO         2571    i.lcd_fill_circle   lcd.o
-    0x08006232   0x00000002   PAD
-    0x08006234   0x000002ac   Code   RO         2572    i.lcd_init          lcd.o
-    0x080064e0   0x0000001c   Code   RO         2574    i.lcd_rd_data       lcd.o
-    0x080064fc   0x00000184   Code   RO         2576    i.lcd_scan_dir      lcd.o
-    0x08006680   0x000000f4   Code   RO         2577    i.lcd_set_cursor    lcd.o
-    0x08006774   0x000000dc   Code   RO         2579    i.lcd_show_char     lcd.o
-    0x08006850   0x00000056   Code   RO         2581    i.lcd_show_string   lcd.o
-    0x080068a6   0x00000002   PAD
-    0x080068a8   0x00000050   Code   RO         2583    i.lcd_ssd_backlight_set  lcd.o
-    0x080068f8   0x00000018   Code   RO         2584    i.lcd_wr_data       lcd.o
-    0x08006910   0x00000018   Code   RO         2585    i.lcd_wr_regno      lcd.o
-    0x08006928   0x00000014   Code   RO         2586    i.lcd_write_ram_prepare  lcd.o
-    0x0800693c   0x00000010   Code   RO         2587    i.lcd_write_reg     lcd.o
-    0x0800694c   0x00000030   Code   RO         2225    i.load_draw_dialog  main.o
-    0x0800697c   0x00000138   Code   RO         2226    i.main              main.o
-    0x08006ab4   0x00000094   Code   RO         2227    i.rtp_test          main.o
-    0x08006b48   0x0000035c   Code   RO         2967    i.tp_adjust         touch.o
-    0x08006ea4   0x0000012c   Code   RO         2968    i.tp_adjust_info_show  touch.o
-    0x08006fd0   0x00000034   Code   RO         2969    i.tp_draw_big_point  touch.o
-    0x08007004   0x0000007e   Code   RO         2970    i.tp_draw_touch_point  touch.o
-    0x08007082   0x00000002   PAD
-    0x08007084   0x00000014   Code   RO         2971    i.tp_get_adjust_data  touch.o
-    0x08007098   0x000002d4   Code   RO         2972    i.tp_init           touch.o
-    0x0800736c   0x00000100   Code   RO         2973    i.tp_read_ad        touch.o
-    0x0800746c   0x00000064   Code   RO         2974    i.tp_read_xoy       touch.o
-    0x080074d0   0x00000034   Code   RO         2975    i.tp_read_xy        touch.o
-    0x08007504   0x00000072   Code   RO         2976    i.tp_read_xy2       touch.o
-    0x08007576   0x00000002   PAD
-    0x08007578   0x00000010   Code   RO         2977    i.tp_save_adjust_data  touch.o
-    0x08007588   0x000000d4   Code   RO         2978    i.tp_scan           touch.o
-    0x0800765c   0x00000010   Data   RO         2184    .constdata          system_stm32f4xx.o
-    0x0800766c   0x00000008   Data   RO         2185    .constdata          system_stm32f4xx.o
-    0x08007674   0x00000014   Data   RO         2230    .constdata          main.o
-    0x08007688   0x00002f80   Data   RO         2589    .constdata          lcd.o
-    0x0800a608   0x0000000a   Data   RO         2869    .constdata          ft5206.o
-    0x0800a612   0x00000014   Data   RO         2925    .constdata          gt9xxx.o
-    0x0800a626   0x00000002   PAD
-    0x0800a628   0x00000004   Data   RO         2979    .constdata          touch.o
-    0x0800a62c   0x00000079   Data   RO         2980    .conststring        touch.o
-    0x0800a6a5   0x00000003   PAD
-    0x0800a6a8   0x00000020   Data   RO         3468    Region$$Table       anon$$obj.o
+    0x08002fc0   0x00000148   Code   RO         2861    i.ft5206_scan       ft5206.o
+    0x08003108   0x00000048   Code   RO         2862    i.ft5206_wr_reg     ft5206.o
+    0x08003150   0x00000124   Code   RO         2915    i.gt9xxx_init       gt9xxx.o
+    0x08003274   0x00000060   Code   RO         2916    i.gt9xxx_rd_reg     gt9xxx.o
+    0x080032d4   0x000001e4   Code   RO         2917    i.gt9xxx_scan       gt9xxx.o
+    0x080034b8   0x00000052   Code   RO         2918    i.gt9xxx_wr_reg     gt9xxx.o
+    0x0800350a   0x00000002   PAD
+    0x0800350c   0x0000009c   Code   RO         2223    i.key_scan          main.o
+    0x080035a8   0x00000030   Code   RO         2547    i.lcd_clear         lcd.o
+    0x080035d8   0x000000ec   Code   RO         2549    i.lcd_display_dir   lcd.o
+    0x080036c4   0x000000b6   Code   RO         2224    i.lcd_draw_bline    main.o
+    0x0800377a   0x000000c4   Code   RO         2552    i.lcd_draw_circle   lcd.o
+    0x0800383e   0x00000002   PAD
+    0x08003840   0x00000028   Code   RO         2553    i.lcd_draw_hline    lcd.o
+    0x08003868   0x0000009c   Code   RO         2554    i.lcd_draw_line     lcd.o
+    0x08003904   0x00000018   Code   RO         2555    i.lcd_draw_point    lcd.o
+    0x0800391c   0x0000022e   Code   RO         2557    i.lcd_ex_ili9341_reginit  lcd.o
+    0x08003b4a   0x00000342   Code   RO         2558    i.lcd_ex_ili9806_reginit  lcd.o
+    0x08003e8c   0x00000ef4   Code   RO         2559    i.lcd_ex_nt35310_reginit  lcd.o
+    0x08004d80   0x00000efa   Code   RO         2560    i.lcd_ex_nt35510_reginit  lcd.o
+    0x08005c7a   0x00000170   Code   RO         2561    i.lcd_ex_ssd1963_reginit  lcd.o
+    0x08005dea   0x000001aa   Code   RO         2562    i.lcd_ex_st7789_reginit  lcd.o
+    0x08005f94   0x000001c8   Code   RO         2563    i.lcd_ex_st7796_reginit  lcd.o
+    0x0800615c   0x00000048   Code   RO         2564    i.lcd_fill          lcd.o
+    0x080061a4   0x000000b6   Code   RO         2565    i.lcd_fill_circle   lcd.o
+    0x0800625a   0x00000002   PAD
+    0x0800625c   0x000002ac   Code   RO         2566    i.lcd_init          lcd.o
+    0x08006508   0x0000001c   Code   RO         2568    i.lcd_rd_data       lcd.o
+    0x08006524   0x00000184   Code   RO         2570    i.lcd_scan_dir      lcd.o
+    0x080066a8   0x000000f4   Code   RO         2571    i.lcd_set_cursor    lcd.o
+    0x0800679c   0x000000dc   Code   RO         2573    i.lcd_show_char     lcd.o
+    0x08006878   0x00000056   Code   RO         2575    i.lcd_show_string   lcd.o
+    0x080068ce   0x00000002   PAD
+    0x080068d0   0x00000050   Code   RO         2577    i.lcd_ssd_backlight_set  lcd.o
+    0x08006920   0x00000018   Code   RO         2578    i.lcd_wr_data       lcd.o
+    0x08006938   0x00000018   Code   RO         2579    i.lcd_wr_regno      lcd.o
+    0x08006950   0x00000014   Code   RO         2580    i.lcd_write_ram_prepare  lcd.o
+    0x08006964   0x00000010   Code   RO         2581    i.lcd_write_reg     lcd.o
+    0x08006974   0x00000030   Code   RO         2225    i.load_draw_dialog  main.o
+    0x080069a4   0x00000138   Code   RO         2226    i.main              main.o
+    0x08006adc   0x00000094   Code   RO         2227    i.rtp_test          main.o
+    0x08006b70   0x0000035c   Code   RO         2961    i.tp_adjust         touch.o
+    0x08006ecc   0x0000012c   Code   RO         2962    i.tp_adjust_info_show  touch.o
+    0x08006ff8   0x00000034   Code   RO         2963    i.tp_draw_big_point  touch.o
+    0x0800702c   0x0000007e   Code   RO         2964    i.tp_draw_touch_point  touch.o
+    0x080070aa   0x00000002   PAD
+    0x080070ac   0x00000014   Code   RO         2965    i.tp_get_adjust_data  touch.o
+    0x080070c0   0x000002d4   Code   RO         2966    i.tp_init           touch.o
+    0x08007394   0x00000100   Code   RO         2967    i.tp_read_ad        touch.o
+    0x08007494   0x00000064   Code   RO         2968    i.tp_read_xoy       touch.o
+    0x080074f8   0x00000034   Code   RO         2969    i.tp_read_xy        touch.o
+    0x0800752c   0x00000072   Code   RO         2970    i.tp_read_xy2       touch.o
+    0x0800759e   0x00000002   PAD
+    0x080075a0   0x00000010   Code   RO         2971    i.tp_save_adjust_data  touch.o
+    0x080075b0   0x000000d4   Code   RO         2972    i.tp_scan           touch.o
+    0x08007684   0x00000010   Data   RO         2184    .constdata          system_stm32f4xx.o
+    0x08007694   0x00000008   Data   RO         2185    .constdata          system_stm32f4xx.o
+    0x0800769c   0x00000014   Data   RO         2229    .constdata          main.o
+    0x080076b0   0x00002f80   Data   RO         2583    .constdata          lcd.o
+    0x0800a630   0x0000000a   Data   RO         2863    .constdata          ft5206.o
+    0x0800a63a   0x00000014   Data   RO         2919    .constdata          gt9xxx.o
+    0x0800a64e   0x00000002   PAD
+    0x0800a650   0x00000004   Data   RO         2973    .constdata          touch.o
+    0x0800a654   0x00000079   Data   RO         2974    .conststring        touch.o
+    0x0800a6cd   0x00000003   PAD
+    0x0800a6d0   0x00000020   Data   RO         3462    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000568, Max: 0x00020000, ABSOLUTE)
@@ -2129,21 +2125,21 @@ Memory Map of the image
 
     0x20000000   0x0000000c   Data   RW          721    .data               stm32f4xx_hal.o
     0x2000000c   0x00000004   Data   RW         2186    .data               system_stm32f4xx.o
-    0x20000010   0x00000001   Data   RW         2233    .data               main.o
+    0x20000010   0x00000001   Data   RW         2232    .data               main.o
     0x20000011   0x00000003   PAD
-    0x20000014   0x00000008   Data   RW         2342    .data               fsmc.o
-    0x2000001c   0x00000004   Data   RW         2591    .data               lcd.o
-    0x20000020   0x00000001   Data   RW         2870    .data               ft5206.o
-    0x20000021   0x00000002   Data   RW         2926    .data               gt9xxx.o
+    0x20000014   0x00000008   Data   RW         2336    .data               fsmc.o
+    0x2000001c   0x00000004   Data   RW         2585    .data               lcd.o
+    0x20000020   0x00000001   Data   RW         2864    .data               ft5206.o
+    0x20000021   0x00000002   Data   RW         2920    .data               gt9xxx.o
     0x20000023   0x00000001   PAD
-    0x20000024   0x00000048   Data   RW         2981    .data               touch.o
-    0x2000006c   0x00000004   Data   RW         3115    .data               delay.o
-    0x20000070   0x00000004   Data   RW         3450    .data               mc_w.l(stdout.o)
-    0x20000074   0x00000050   Zero   RW         2341    .bss                fsmc.o
-    0x200000c4   0x00000040   Zero   RW         2437    .bss                usart.o
-    0x20000104   0x0000000e   Zero   RW         2588    .bss                lcd.o
+    0x20000024   0x00000048   Data   RW         2975    .data               touch.o
+    0x2000006c   0x00000004   Data   RW         3109    .data               delay.o
+    0x20000070   0x00000004   Data   RW         3444    .data               mc_w.l(stdout.o)
+    0x20000074   0x00000050   Zero   RW         2335    .bss                fsmc.o
+    0x200000c4   0x00000040   Zero   RW         2431    .bss                usart.o
+    0x20000104   0x0000000e   Zero   RW         2582    .bss                lcd.o
     0x20000112   0x00000002   PAD
-    0x20000114   0x00000054   Zero   RW         3062    .bss                i2c.o
+    0x20000114   0x00000054   Zero   RW         3056    .bss                i2c.o
     0x20000168   0x00000400   Zero   RW            1    STACK               startup_stm32f407xx.o
 
 
@@ -2154,33 +2150,33 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       572         30          0          0          0       5202   ctiic.o
-        80         10          0          4          0       2467   delay.o
-       300         44          0          8         80       2255   fsmc.o
-       798         80         10          1          0       3833   ft5206.o
-       312         18          0          0          0       1087   gpio.o
-       914         68         20          2          0       3927   gt9xxx.o
-       264         56          0          0         84       2882   i2c.o
-     13072        138      12160          4         14      27200   lcd.o
-      1256        198         20          1          0       6686   main.o
-        36          8        392          0       1024        836   startup_stm32f407xx.o
-       144         24          0         12          0       3941   stm32f4xx_hal.o
-       206         14          0          0          0      31476   stm32f4xx_hal_cortex.o
-         0          0          0          0          0     674320   stm32f4xx_hal_flash_ramfunc.o
-       460         44          0          0          0       3692   stm32f4xx_hal_gpio.o
-      2014         36          0          0          0      12942   stm32f4xx_hal_i2c.o
-        88          0          0          0          0        522   stm32f4xx_hal_msp.o
-      1272         82          0          0          0       5624   stm32f4xx_hal_rcc.o
-        86          0          0          0          0       1212   stm32f4xx_hal_sram.o
-       782          8          0          0          0       2056   stm32f4xx_hal_uart.o
-        30          0          0          0          0       4122   stm32f4xx_it.o
-       216         12          0          0          0       2703   stm32f4xx_ll_fsmc.o
-        84         18         24          4          0       1159   system_stm32f4xx.o
-      2832        446        125         72          0      11474   touch.o
-       172         44          0          0         64       2146   usart.o
+       572         30          0          0          0       5338   ctiic.o
+        80         10          0          4          0       2559   delay.o
+       300         44          0          8         80       2331   fsmc.o
+       798         80         10          1          0       3925   ft5206.o
+       312         18          0          0          0       1119   gpio.o
+       954         86         20          2          0       4035   gt9xxx.o
+       264         56          0          0         84       2978   i2c.o
+     13072        138      12160          4         14      27632   lcd.o
+      1256        198         20          1          0       6830   main.o
+        36          8        392          0       1024        840   startup_stm32f407xx.o
+       144         24          0         12          0       4029   stm32f4xx_hal.o
+       206         14          0          0          0      31584   stm32f4xx_hal_cortex.o
+         0          0          0          0          0     674496   stm32f4xx_hal_flash_ramfunc.o
+       460         44          0          0          0       3772   stm32f4xx_hal_gpio.o
+      2014         36          0          0          0      13114   stm32f4xx_hal_i2c.o
+        88          0          0          0          0        538   stm32f4xx_hal_msp.o
+      1272         82          0          0          0       5732   stm32f4xx_hal_rcc.o
+        86          0          0          0          0       1240   stm32f4xx_hal_sram.o
+       782          8          0          0          0       2100   stm32f4xx_hal_uart.o
+        30          0          0          0          0       4262   stm32f4xx_it.o
+       216         12          0          0          0       2767   stm32f4xx_ll_fsmc.o
+        84         18         24          4          0       1203   system_stm32f4xx.o
+      2832        446        125         72          0      11702   touch.o
+       172         44          0          0         64       2226   usart.o
 
     ----------------------------------------------------------------------
-     26016       1378      12788        112       1268     813764   Object Totals
+     26056       1396      12788        112       1268     816352   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         26          0          5          4          2          0   (incl. Padding)
 
@@ -2239,15 +2235,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     29908       1490      12788        116       1268     803100   Grand Totals
-     29908       1490      12788        116       1268     803100   ELF Image Totals
-     29908       1490      12788        116          0          0   ROM Totals
+     29948       1508      12788        116       1268     805688   Grand Totals
+     29948       1508      12788        116       1268     805688   ELF Image Totals
+     29948       1508      12788        116          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                42696 (  41.70kB)
+    Total RO  Size (Code + RO Data)                42736 (  41.73kB)
     Total RW  Size (RW Data + ZI Data)              1384 (   1.35kB)
-    Total ROM Size (Code + RO Data + RW Data)      42812 (  41.81kB)
+    Total ROM Size (Code + RO Data + RW Data)      42852 (  41.85kB)
 
 ==============================================================================
 
