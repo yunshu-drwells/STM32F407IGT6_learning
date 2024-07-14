@@ -98,6 +98,11 @@ int main(void)
   MX_USART1_UART_Init();
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
+	printf("I2C2 EEPROM test!\n");
+	Eeprom_Write(0, W, sizeof(W));
+	HAL_Delay(1000);
+	Eeprom_Read(0, R, sizeof(R));
+	printf("Read: %s\n", R);
 	
   /* USER CODE END 2 */
 
@@ -106,11 +111,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		printf("I2C2 EEPROM test!\n");
-		Eeprom_Write(0, W, sizeof(W));
-		HAL_Delay(1000);
-		Eeprom_Read(0, R, sizeof(R));
-		printf("Read: %s\n", R);
+
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */

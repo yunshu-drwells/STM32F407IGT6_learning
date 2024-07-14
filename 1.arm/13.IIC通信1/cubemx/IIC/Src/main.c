@@ -38,17 +38,20 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f4xx_hal.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "24cxx.h"
+#include "delay.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
+uint8_t g_text_buf[] = "STM32 IIC TEST"; /* 要写入到24c02的字符串数组 */ 
+#define TEXT_SIZE sizeof(g_text_buf) /* TEXT字符串长度 */
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -92,8 +95,23 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+	delay_init(168); /* 延时初始化 */
+	uint8_t datatemp[TEXT_SIZE] = {0};
+	at24cxx_init(); /* 初始化24CXX */
+	
+	while (at24cxx_check()){ /* 检测不到24c02 */
+		printf("Can not find 24c02\n");
+		delay_ms(500);
+	}
+	
+	printf("I2C2 EEPROM test!\n");
+	printf("g_text_buf: %s\n", g_text_buf);
+	at24cxx_write(0, (uint8_t *)g_text_buf, TEXT_SIZE);
+	HAL_Delay(1000);
+	at24cxx_read(0, datatemp, TEXT_SIZE);
+	printf("Read: %s\n", datatemp);
   /* USER CODE END 2 */
 
   /* Infinite loop */
