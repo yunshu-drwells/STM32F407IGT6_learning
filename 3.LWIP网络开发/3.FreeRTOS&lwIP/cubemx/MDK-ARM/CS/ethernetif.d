@@ -89,3 +89,4 @@ cs\ethernetif.o: ../Inc/ethernetif.h
 cs\ethernetif.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 cs\ethernetif.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 cs\ethernetif.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+cs\ethernetif.o: ../Inc/usart.h

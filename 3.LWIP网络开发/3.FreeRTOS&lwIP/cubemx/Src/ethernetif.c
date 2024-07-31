@@ -28,6 +28,7 @@
 #include "ethernetif.h"
 #include <string.h>
 #include "cmsis_os.h"
+#include "usart.h"
 /* Within 'USER CODE' section, code will be kept by default at each generation */
 /* USER CODE BEGIN 0 */
 
@@ -700,6 +701,15 @@ __weak void ethernetif_notify_conn_changed(struct netif *netif)
   /* NOTE : This is function could be implemented in user file 
             when the callback is needed,
   */
+	if(netif_is_link_up(netif)){
+		printf("netif link is up\n");
+		if(!netif_is_up(netif)){
+			netif_set_up(netif);
+			printf("netif is up\n");
+		}
+	}else{
+		printf("netif link is down\n");
+	}
 
 }
 /* USER CODE END 8 */ 
