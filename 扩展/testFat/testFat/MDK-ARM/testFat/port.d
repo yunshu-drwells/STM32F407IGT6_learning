@@ -1,0 +1,12 @@
+testfat\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+testfat\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+testfat\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+testfat\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+testfat\port.o: ../Inc/FreeRTOSConfig.h
+testfat\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+testfat\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+testfat\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+testfat\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+testfat\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+testfat\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+testfat\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

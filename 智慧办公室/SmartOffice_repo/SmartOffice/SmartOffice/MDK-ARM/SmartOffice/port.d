@@ -1,0 +1,12 @@
+smartoffice\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+smartoffice\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+smartoffice\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+smartoffice\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+smartoffice\port.o: ../Inc/FreeRTOSConfig.h
+smartoffice\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+smartoffice\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+smartoffice\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+smartoffice\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+smartoffice\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+smartoffice\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+smartoffice\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

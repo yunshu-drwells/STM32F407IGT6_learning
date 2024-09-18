@@ -1,0 +1,35 @@
+freertos.c->MX_FREERTOS_Init()中默认代码二值信号量会初始化为1:osSemaphoreCreate(osSemaphore(CpuPrintfBinarySem), 1);
+
+gpio.c
+//按键检测回调函数
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+	//判断是不是KEY0的中断
+	if(GPIO_Pin == KEY0_Pin){
+		//KEY0是否按下
+		if(GPIO_PIN_RESET == HAL_GPIO_ReadPin(KEY0_GPIO_Port, KEY0_Pin)){
+			HAL_Delay(20);  //去抖动
+			if(GPIO_PIN_RESET == HAL_GPIO_ReadPin(KEY0_GPIO_Port, KEY0_Pin)){
+				xSemaphoreGiveFromISR(CpuPrintfBinarySemHandle, NULL);  //释放信号量
+			}
+		}
+	}
+	
+}
+
+freertos.c
+void Key0_Task(void const * argument)
+{
+	KeyStatus = KEY_RESET;
+
+  for(;;)
+  {
+		if(xSemaphoreTake(CpuPrintfBinarySemHandle, portMAX_DELAY) == pdPASS){  //获取信号量
+			...
+		}
+  }
+  /* USER CODE END Key0_Task */
+}
+
+以上代码执行正确，按键中断后会执行Key0_Task任务。如果将二值信号量会初始化为0，上面代码就出错了。为什么？
+
+按我查到的资料，初始化为0没有任何问题

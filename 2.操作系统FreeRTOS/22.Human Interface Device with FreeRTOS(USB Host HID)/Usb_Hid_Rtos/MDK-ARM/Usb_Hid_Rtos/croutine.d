@@ -1,0 +1,14 @@
+usb_hid_rtos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+usb_hid_rtos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+usb_hid_rtos\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+usb_hid_rtos\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+usb_hid_rtos\croutine.o: ../Core/Inc/FreeRTOSConfig.h
+usb_hid_rtos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+usb_hid_rtos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+usb_hid_rtos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+usb_hid_rtos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+usb_hid_rtos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+usb_hid_rtos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+usb_hid_rtos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+usb_hid_rtos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
+usb_hid_rtos\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

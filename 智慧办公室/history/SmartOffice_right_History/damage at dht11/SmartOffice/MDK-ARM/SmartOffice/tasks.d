@@ -1,0 +1,16 @@
+smartoffice\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c
+smartoffice\tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+smartoffice\tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+smartoffice\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+smartoffice\tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+smartoffice\tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+smartoffice\tasks.o: ../Inc/FreeRTOSConfig.h
+smartoffice\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+smartoffice\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+smartoffice\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+smartoffice\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+smartoffice\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+smartoffice\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+smartoffice\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+smartoffice\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+smartoffice\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h

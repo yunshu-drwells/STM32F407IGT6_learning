@@ -1,0 +1,15 @@
+testusbdevice\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/timers.c
+testusbdevice\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+testusbdevice\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+testusbdevice\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+testusbdevice\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+testusbdevice\timers.o: ../Inc/FreeRTOSConfig.h
+testusbdevice\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+testusbdevice\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+testusbdevice\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+testusbdevice\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+testusbdevice\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+testusbdevice\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+testusbdevice\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+testusbdevice\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+testusbdevice\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h

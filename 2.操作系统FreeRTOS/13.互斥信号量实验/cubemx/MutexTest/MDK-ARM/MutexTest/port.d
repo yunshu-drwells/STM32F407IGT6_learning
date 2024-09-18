@@ -1,0 +1,12 @@
+mutextest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+mutextest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+mutextest\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+mutextest\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+mutextest\port.o: ../Core/Inc/FreeRTOSConfig.h
+mutextest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+mutextest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+mutextest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+mutextest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+mutextest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+mutextest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+mutextest\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
