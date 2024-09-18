@@ -1,3 +1,0 @@
----- vTaskSwitchContext Matches (2 in 0 files) ----
-port.c (Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F) line 443 : 	extern vTaskSwitchContext;
-port.c (Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F) line 469 : 	bl vTaskSwitchContext

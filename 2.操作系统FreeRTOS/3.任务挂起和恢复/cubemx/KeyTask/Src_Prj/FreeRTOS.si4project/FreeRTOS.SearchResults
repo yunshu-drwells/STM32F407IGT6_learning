@@ -1,7 +1,0 @@
----- prvIdleTask Matches (6 in 0 files) ----
-tasks.c (Middlewares\Third_Party\FreeRTOS\Source) line 450 :  * void prvIdleTask( void *pvParameters );
-tasks.c (Middlewares\Third_Party\FreeRTOS\Source) line 453 : static portTASK_FUNCTION_PROTO( prvIdleTask, pvParameters );
-vTaskStartScheduler in tasks.c (Middlewares\Third_Party\FreeRTOS\Source) : 		xIdleTaskHandle = xTaskCreateStatic(	prvIdleTask,
-vTaskStartScheduler in tasks.c (Middlewares\Third_Party\FreeRTOS\Source) : 		xReturn = xTaskCreate(	prvIdleTask,
-tasks.c (Middlewares\Third_Party\FreeRTOS\Source) line 3389 :  * void prvIdleTask( void *pvParameters );
-tasks.c (Middlewares\Third_Party\FreeRTOS\Source) line 3392 : static portTASK_FUNCTION( prvIdleTask, pvParameters )
